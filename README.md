@@ -37,18 +37,6 @@ Explores **how AI enhances domain expertise**, **prompt engineering**, and **aut
 - **AI-driven SME insights & content generation**  
 - **Lab:** AI-generated email marketing content  
 
-## **📂 Repository Structure**  
-
-| **Folder** | **Description** |
-|------------|---------------|
-| `part1_intro_ai/` | Code examples from Part 1: AI fundamentals in data engineering |
-| `part2_coding_companion/` | AI-assisted SQL, Python, and API interactions |
-| `part3_data_cleaning/` | AI-driven data cleaning and transformation workflows |
-| `part4_data_generation/` | AI-powered data generation and web scraping |
-| `part5_sme_with_ai/` | AI for subject matter expertise and content generation |
-| `labs/` | Full end-to-end **lab exercises** from the book |
-| `README.md` | This file – repo overview and structure |
-
 ## **💡 How to Use This Repo**  
 1. **Follow the book** – The code aligns with each chapter’s concepts.  
 2. **Run the labs** – Each **lab folder** contains practical exercises.  
