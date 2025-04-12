@@ -1,7 +1,3 @@
-You got it, mon ami! Here's a tidy little **Markdown setup guide** for using environment variables with `os` in Python. You can plug this into your repo or docs and reference it anytime you want readers to keep API keys clean and secure.
-
----
-
 ## 🛠️ Environment Variable Setup Guide (for `os.getenv()` in Python)
 
 ### Step 1: Why use environment variables?
@@ -91,7 +87,3 @@ Never commit `.env` files or keys to GitHub. Add this to your `.gitignore`:
 ```
 .env
 ```
-
----
-
-Let me know if you want a companion setup guide for NewsAPI or any other services!

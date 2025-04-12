@@ -1,22 +1,39 @@
-# Chapter 1: Data Engineering and AI  
+# Chapter 1: Before You Begin
 
-## Overview  
+This chapter introduces the core ideas behind using AI in modern data engineering workflows. It explains why AI matters in this space, who this book is for, and what tools you’ll need to follow along.
 
-This chapter introduces the role of AI in data engineering, particularly focusing on how large language models (LLMs) enhance and streamline workflows. Key areas covered include:  
+---
 
-- Using AI as a coding companion  
-- Automating data transformations in ETL/ELT  
-- Feature engineering with AI  
-- Understanding and refining prompt engineering  
+## 🔍 Topics Covered
 
-## Code Examples  
+- Understanding how AI enhances, not replaces, data engineers
+- Identifying real-world AI applications in data workflows
+- Exploring the current AI ecosystem and tools used in the book
+- Outlining the skills and roles this book is designed for
+- Getting your local environment set up for hands-on examples
 
-This repo contains Python scripts corresponding to the examples in Chapter 1:  
+---
 
-| File Name       | Description |
-|----------------|-------------|
-| `example_1_1.py` | Loops through a list and multiplies each element by 13 |
-| `example_1_2.py` | Uses AI for automating data transformation tasks |
-| `example_1_3.py` | Feature engineering using AI suggestions |
-| `example_1_4.py` | Demonstrates iterative prompt refinement with AI |
+## ⚙️ Environment Setup
 
+To run the examples in this chapter (and the rest of the book), complete the following setup:
+
+1. **Install PostgreSQL and pgAdmin**  
+   → [Setup instructions](https://github.com/dave-melillo/data_eng_ai/blob/main/setup/postgres_setup.md)
+
+2. **Install Jupyter Lab**  
+   → [Setup instructions](https://github.com/dave-melillo/data_eng_ai/blob/main/setup/jupyter_setup.md)
+
+3. **Create an OpenAI Account**  
+   → [API key instructions](https://github.com/dave-melillo/data_eng_ai/blob/main/setup/openai_setup.md)
+
+---
+
+## ✅ After Completing This Chapter
+
+You should have:
+- A working SQL and Python environment
+- Access to the OpenAI API
+- A clear understanding of how this book uses AI in practical workflows
+
+You’re now ready to dive into AI-assisted SQL and Python tasks in the chapters ahead.

@@ -1,3 +1,4 @@
+
 # **Data Engineering with AI in a Month of Lunches**  
 
 ## **Overview**  
@@ -7,40 +8,62 @@ This repo contains all the **code listings, labs, and resources** that accompany
 
 ## **📖 Book Structure**  
 
-### **🟢 Part 1: Introducing Data Engineering with AI**  
-Lays the foundation for understanding **AI’s role in data engineering**, its **key benefits**, and how to **integrate AI** into existing data pipelines.  
-- How AI is transforming data engineering  
-- Leveraging **LLMs like GPT** for automation  
-- AI-powered enhancements in **ETL, ELT, and data pipelines**  
+### **🟢 Part 1: Core Concepts of Data Engineering with AI**  
+Lays the foundation for understanding **AI’s role in data engineering**, key benefits, and prompt engineering techniques for SQL and Python workflows.  
+- Understanding the data engineer's new relationship with AI  
+- Zero-shot, few-shot, chain-of-thought, and other prompting styles  
+- Coding SQL and Python with AI  
+- Using the OpenAI API inside data pipelines  
+- **Includes labs on SQL, Python, and AI-driven sentiment analysis**
 
-### **🟠 Part 2: Using LLMs as a Coding Companion for Data Engineering**  
-Explores how AI **assists with SQL, Python, and API interactions**, improving efficiency and code quality.  
-- **AI-assisted SQL query generation** (joins, CTEs, complex queries)  
-- **Using AI with Python** for API calls, JSON parsing, and regex  
-- **Best practices for AI-assisted coding** (zero-shot, few-shot, one-shot prompts)  
-- **Lab:** Using OpenAI’s API in a data workflow  
+### **🟠 Part 2: Data Cleaning and Transformation Pipelines with AI**  
+Explores AI-assisted approaches to improving **data quality**, normalization, and transformation.  
+- Detecting inconsistencies and fixing missing data  
+- Standardizing formats and applying transformations  
+- Building production-grade cleaning workflows with AI support  
 
-### **🔵 Part 3: Data Cleaning and Transformation Pipelines with AI**  
-Covers AI-driven techniques for **data quality, normalization, and transformation**.  
-- **Detecting & resolving inconsistencies**  
-- **Standardizing data formats & handling missing values**  
-- **Aligning time zones & structuring text fields**  
-- **Lab:** AI-powered data cleaning pipeline  
+### **🔵 Part 3: Generating Data with AI**  
+Demonstrates how AI can help **create new datasets** by augmenting existing ones or extracting unstructured data from the web.  
+- AI-powered web scraping techniques  
+- Structuring messy text into clean tabular format  
+- Strategies for enriching data automatically  
 
-### **🟣 Part 4: Generating Data with AI**  
-Demonstrates **how AI can generate structured and unstructured data**, including **web scraping** and **automated data augmentation**.  
-- **AI-driven web scraping & handling unstructured data**  
-- **Lab:** Data scraping with AI  
+### **🟣 Part 4: Agentic Workflows in Data Engineering with AI**  
+Introduces **agentic workflows**, where AI becomes an autonomous operator in your pipeline—making decisions, activating APIs, and triggering next steps.  
+- Introduction to agentic workflows for data engineers  
+- Generating subject matter expertise with AI  
+- Decision trees, prompt chains, and data activation  
+- Practical application: AI-driven outreach for marketing and sales  
 
-### **🟡 Part 5: Generating Subject Matter Expertise with AI**  
-Explores **how AI enhances domain expertise**, **prompt engineering**, and **automated content generation**.  
-- **AI-driven SME insights & content generation**  
-- **Lab:** AI-generated email marketing content  
+Merci for the detail, cher—now we cookin’ with some real roux. Here’s the corrected **How to Use This Repo** section that reflects the repo’s structure with folders for each chapter, subfolders, notebooks, and the setup guide:
+
+
 
 ## **💡 How to Use This Repo**  
-1. **Follow the book** – The code aligns with each chapter’s concepts.  
-2. **Run the labs** – Each **lab folder** contains practical exercises.  
-3. **Experiment!** – Modify the code, tweak AI prompts, and integrate with your own data.  
+This repo mirrors the structure of the book, with **one main folder per chapter**, and supporting materials organized for easy access and hands-on learning. Here's how it's laid out:  
+
+- Each **chapter folder** contains:
+  - `images/` – Figures and visuals used in the chapter  
+  - `listings/` – Numbered code listings referenced in the book  
+  - `notebooks/` –  
+    - `GUIDE` notebook: A consolidated walkthrough of the chapter’s concepts as a complete pipeline  
+    - `LAB` notebook: Deep dive into the chapter lab, with line-by-line answers and explanations  
+  - `setup/` – Any chapter-specific configs or data assets  
+  - `README.md` – A short intro and instructions tailored to the chapter  
+
+- The **top-level `setup/` folder** contains all **global installation instructions** for:
+  - Tools and environments (e.g., Python, Jupyter, virtualenvs)  
+  - API setup (e.g., OpenAI, NewsAPI)  
+  - Credential management (e.g., `.env` files)  
+
+To get started:  
+1. Follow the global setup guide in `/setup` to configure your environment.  
+2. Pick a chapter and explore the `GUIDE` notebook first to understand the concepts.  
+3. Dive into the `LAB` notebook to practice with the code.  
+4. Use the `listings/` folder to reference any specific code snippets from the book.  
+
+> 💬 **Pro tip:** Notebooks are meant to be tweaked—don’t be shy. Adjust prompts, try new APIs, and modify pipelines to fit your real-world projects.
+
 
 ## **📌 Prerequisites**  
 - Python 3.x  
