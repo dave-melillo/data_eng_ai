@@ -1,0 +1,101 @@
+order_id,email,age,purchase_amount,customer_id,store_location,optional_note,purchase_date,SKU,description,first_name,last_name
+1,katie.smith@hotmail.com,38.0,516.46,7e430391-da3b-4ab8-bd2e-63e22a6b97bb,Florida,,15-01-2023,CPT535,Leash,Katie,Smith
+2,erika.mcdaniel@yahoo.com,29.0,,4d20709c-9ff4-437a-8172-f390c693cc70,VA,,12/31/2023,CUC263,Traction pad,Erika,Mcdaniel
+3,edward.hunt@hotmail.com,62.0,-84.95,41473f03-e37c-4fff-8d91-7a4963d48b8d,Massachusetts,,01-15-2023,CPT535,Leash,Edward,Hunt
+4,amanda.shaw@hotmail.com,60.0,40.93,5ccbe607-4190-49cd-a729-8fdf272fd647,New York,,15-01-2023,ZBA521,Surf wax,Amanda,Shaw
+5,betty.hicks@hotmail.com,43.0,114.53,38f0c359-adce-46ae-b1cd-8dbaa3453a00,MA,,15-01-2023,ICZ284,Wax comb,Betty,Hicks
+6,stephanie.sanders@gmail.com,46.0,503.94,68884de5-2364-49a0-a29b-289a836d25e3,VA,,31/12/2023,abc12,,Stephanie,Sanders
+7,ashley.smith@yahoo.com,32.0,386.81,f4f04583-8c20-4bfa-a597-c2c2ec7363c8,Virginia,,01-15-2023,,,Ashley,Smith
+8,555-1234,53.0,,b6b2d09b-96a0-4e3a-a7a4-021185e35d50,NY,,01-15-2023,VVL444,Rash guard,Jerry,Rodriguez
+9,amanda.hubbard@hotmail.com,62.0,57.02,edf5ecc7-0113-4ade-869a-dfd6fa15683b,FL,,2023-01-01,ZIS343,Sunscreen,Amanda,Hubbard
+10,555-1234,43.0,200.33,902057ad-15d3-49a0-bbcc-57b69b631d45,New York,,2023-01-01,ICZ284,Wax comb,Donna,Miller
+11,danielle.cooke@hotmail.com,,420.21,2ec7c5e4-5400-4b77-823a-417dd1741fb9,NJ,,2023/01/01,XFP892,Surf helmet,Danielle,Cooke
+12,veronica.barrett@yahoo.com,61.0,384.39,fe20db5a-71ab-4ad8-91a6-195ca036f54a,Virginia,,12/31/2023,ZTA186,Shortboard surfboard,Veronica,Barrett
+13,erin.cooper@hotmail.com,63.0,399.74,19e10ae1-a4af-4f3d-8b85-7d01a22d72ce,New Jersey,,2023-01-01,ICZ284,Wax comb,Erin,Cooper
+14,brian.dalton@hotmail.com,43.0,140.75,12e34b7c-d858-4b08-95ed-1527f1f3278f,Massachusetts,,01-15-2023,SUP332,Board shorts,Brian,Dalton
+15,susan.porter@hotmail.com,56.0,,1acadd2c-dab7-4fa7-b257-25ad2333ee24,FL,,2023-01-01,GST862,Wetsuit - shorty,Susan,Porter
+16,jerry.moore@gmail.com,39.0,610.2,abb5a0f2-2ca0-4fa7-9cee-f94cd09981b4,VA,,01-15-2023,ZIS343,Sunscreen,Jerry,Moore
+17,timothy.gonzalez@yahoo.com,24.0,113.09,1fe75e88-1acd-4b6c-9d7b-6ebfdfa30413,Florida,,12/31/2023,GST862,Wetsuit - shorty,Timothy,Gonzalez
+18,ashley.smith@yahoo.com,32.0,442.88,f4f04583-8c20-4bfa-a597-c2c2ec7363c8,FL,,01-15-2023,,,Ashley,Smith
+19,,43.0,,902057ad-15d3-49a0-bbcc-57b69b631d45,VA,,2023-01-01,,,Donna,Miller
+20,colleen.montgomery@yahoo.com,65.0,147.33,ec026bfe-399a-416f-bf4a-483290b960a1,Massachusetts,,01-15-2023,SUP332,Board shorts,Colleen,Montgomery
+21,michelle.miller@gmail.com,30.0,487.5,1fef2f15-047b-4ee6-9723-1ef67983e7a2,NJ,,01-15-2023,VYJ034,Fins,Michelle,Miller
+22,matthew.preston@gmail.com,65.0,376.81,9ab17cd0-d7c4-4bc7-b875-1209279107e5,Florida,,31/12/2023,ZBA521,Surf wax,Matthew,Preston
+23,renee.lloyd@hotmail.com,37.0,511.26,6f4a950a-2054-4dc7-a18a-b8ec4d90148c,VA,,2023-01-01,CUC263,Traction pad,Renee,Lloyd
+24,anna.oconnor@gmail.com,55.0,117.03,370c1316-aa3b-4bd0-a15b-766679e69549,NY,,01-15-2023,ICZ284,Wax comb,Anna,Oconnor
+25,darrell.shepherd@gmail.com,35.0,499.09,4447ee5e-40ed-455b-8ae9-aa0895cf746c,NY,,01-15-2023,ERE221,Longboard surfboard,Darrell,Shepherd
+26,katie.smith@hotmail.com,38.0,143.17,7e430391-da3b-4ab8-bd2e-63e22a6b97bb,Virginia,,15-01-2023,ZTA186,Shortboard surfboard,Katie,Smith
+27,jose.thompson@gmail.com,58.0,627.34,117535b4-3efa-4a7f-9b60-5fbde7e36ca1,Florida,,2023/01/01,CPT535,Leash,Jose,Thompson
+28,matthew.preston@gmail.com,,209.83,9ab17cd0-d7c4-4bc7-b875-1209279107e5,Florida,,31/12/2023,SUP332,Board shorts,Matthew,Preston
+29,yolanda.george@gmail.com,62.0,764.89,8d71e5ae-bd6a-4aae-9ec7-a7799e868fb6,VA,,2023-01-01,ZHP546,Beach towel,Yolanda,George
+30,amanda.shaw@hotmail.com,60.0,208.67,5ccbe607-4190-49cd-a729-8fdf272fd647,MA,,12/31/2023,CPT535,Leash,Amanda,Shaw
+31,,33.0,474.02,2ec7c5e4-5400-4b77-823a-417dd1741fb9,FL,,31/12/2023,AAS588,Surf poncho,Danielle,Cooke
+32,cynthia.wright@yahoo.com,27.0,,9ecbfa97-58a2-4647-9f02-63082b2cc8a8,Virginia,,01-15-2023,DEU661,Roof rack straps,Cynthia,Wright
+33,heather.peterson@gmail.com,50.0,33.93,42e1b08c-fb65-440d-b80f-554a150afe18,New York,,2023-01-01,ICZ284,Wax comb,Heather,Peterson
+34,example@,32.0,231.72,a307fe4f-1080-4a3a-8ccd-e5d451452f6f,Virginia,,12/31/2023,ERE221,Longboard surfboard,Cheryl,Snyder
+35,amanda.shaw@hotmail.com,60.0,573.22,5ccbe607-4190-49cd-a729-8fdf272fd647,NJ,,31/12/2023,a12bc3,,Amanda,Shaw
+36,richard.miller@yahoo.com,28.0,322.86,72bdd539-c7b6-4f01-9514-28a94a25c46a,Massachusetts,,01-15-2023,CPT535,Leash,Richard,Miller
+37,example@.co,26.0,525.27,57dd7ad0-31ab-4449-a81e-47f94dad0a7e,Massachusetts,,12/31/2023,ICZ284,Wax comb,Eric,Jackson
+38,alicia.carroll@gmail.com,25.0,245.06,50f5bcb6-067e-48d1-bf2e-c967887372f7,New York,,01-15-2023,UDR732,Wetsuit - full,Alicia,Carroll
+39,michael.duarte@hotmail.com,35.0,257.08,c9441fc4-6a97-4567-b91f-a39796b3aac6,NY,,2023/01/01,SUP332,Board shorts,Michael,Duarte
+40,alicia.carroll@gmail.com,25.0,650.41,50f5bcb6-067e-48d1-bf2e-c967887372f7,New York,,2023-01-01,AAN060,Dry bag,Alicia,Carroll
+41,example@,58.0,286.32,117535b4-3efa-4a7f-9b60-5fbde7e36ca1,NJ,,15-01-2023,AAS588,Surf poncho,Jose,Thompson
+42,edward.hunt@hotmail.com,62.0,394.36,41473f03-e37c-4fff-8d91-7a4963d48b8d,Virginia,,31/12/2023,DEU661,Roof rack straps,Edward,Hunt
+43,erika.mcdaniel@yahoo.com,29.0,,4d20709c-9ff4-437a-8172-f390c693cc70,MA,,2023-01-01,a12bc3,,Erika,Mcdaniel
+44,joshua.elliott@yahoo.com,43.0,753.12,a27918d5-4bd4-4ff0-9205-974f609182c0,FL,,01-15-2023,KFZ139,Ear plugs,Joshua,Elliott
+45,mark.velez@gmail.com,,,3544afde-2e7b-46d6-af1b-ef4c127ac2bb,Massachusetts,,01-15-2023,,,Mark,Velez
+46,timothy.gonzalez@yahoo.com,24.0,-102.42,1fe75e88-1acd-4b6c-9d7b-6ebfdfa30413,Florida,,01-15-2023,ALE909,Soft-top surfboard,Timothy,Gonzalez
+47,jose.thompson@gmail.com,58.0,705.87,117535b4-3efa-4a7f-9b60-5fbde7e36ca1,New Jersey,,2023-01-01,CUC263,Traction pad,Jose,Thompson
+48,renee.lloyd@hotmail.com,,538.68,6f4a950a-2054-4dc7-a18a-b8ec4d90148c,NY,,2023/01/01,DEU661,Roof rack straps,Renee,Lloyd
+49,elizabeth.garrett@yahoo.com,55.0,218.43,292d070b-b098-4ddb-bca6-9b58ee42f55c,Massachusetts,,31/12/2023,,,Elizabeth,Garrett
+50,cynthia.wright@yahoo.com,27.0,594.96,9ecbfa97-58a2-4647-9f02-63082b2cc8a8,VA,,2023/01/01,VVL444,Rash guard,Cynthia,Wright
+51,,41.0,96.84,8f10dfc3-f704-40de-9969-d40be2b821b9,MA,,01-15-2023,KBC610,Waterproof watch,Bruce,Petersen
+52,ashley.smith@yahoo.com,32.0,144.61,f4f04583-8c20-4bfa-a597-c2c2ec7363c8,NY,,2023-01-01,KFZ139,Ear plugs,Ashley,Smith
+53,laura.knight@hotmail.com,24.0,,2785dc6d-19a2-4e44-aced-90eff58eef3d,New Jersey,,12/31/2023,VYJ034,Fins,Laura,Knight
+54,erin.cooper@hotmail.com,,213.8,19e10ae1-a4af-4f3d-8b85-7d01a22d72ce,MA,,15-01-2023,ZTA186,Shortboard surfboard,Erin,Cooper
+55,heather.gray@hotmail.com,,349.03,104f5469-88c3-45e6-ba5e-59faf6364c06,New York,,12/31/2023,ICZ284,Wax comb,Heather,Gray
+56,brianna.brennan@yahoo.com,37.0,600.85,0a99dddd-69a7-4b0d-b1ec-32c9fcaf5dbb,NY,,31/12/2023,KFZ139,Ear plugs,Brianna,Brennan
+57,example@.co,60.0,394.56,5ccbe607-4190-49cd-a729-8fdf272fd647,Florida,,2023-01-01,UDR732,Wetsuit - full,Amanda,Shaw
+58,heather.peterson@gmail.com,50.0,484.22,42e1b08c-fb65-440d-b80f-554a150afe18,NJ,,2023/01/01,GST862,Wetsuit - shorty,Heather,Peterson
+59,eric.jackson@gmail.com,,,57dd7ad0-31ab-4449-a81e-47f94dad0a7e,Massachusetts,,2023-01-01,XFP892,Surf helmet,Eric,Jackson
+60,bruce.petersen@yahoo.com,41.0,612.64,8f10dfc3-f704-40de-9969-d40be2b821b9,Virginia,,01-15-2023,ICZ284,Wax comb,Bruce,Petersen
+61,yolanda.george@gmail.com,62.0,,8d71e5ae-bd6a-4aae-9ec7-a7799e868fb6,FL,,12/31/2023,AAS588,Surf poncho,Yolanda,George
+62,,50.0,196.27,42e1b08c-fb65-440d-b80f-554a150afe18,New York,,2023-01-01,CUC263,Traction pad,Heather,Peterson
+63,example@.co,53.0,293.8,ad880fa5-9abd-45db-a4d4-e7ce3ac17a65,Virginia,,01-15-2023,KFZ139,Ear plugs,Paul,Perry
+64,example@,29.0,570.4,4d20709c-9ff4-437a-8172-f390c693cc70,MA,,2023/01/01,123ABC,,Erika,Mcdaniel
+65,,39.0,68.11,abb5a0f2-2ca0-4fa7-9cee-f94cd09981b4,Massachusetts,,2023-01-01,ERE221,Longboard surfboard,Jerry,Moore
+66,555-1234,62.0,427.58,8d71e5ae-bd6a-4aae-9ec7-a7799e868fb6,FL,,12/31/2023,AAN060,Dry bag,Yolanda,George
+67,example@.co,,180.76,0264dd12-e6ce-485d-9f19-062ed7e37497,New York,,12/31/2023,XFP892,Surf helmet,Denise,Vargas
+68,heather.peterson@gmail.com,50.0,150.75,42e1b08c-fb65-440d-b80f-554a150afe18,NJ,,01-15-2023,ERE221,Longboard surfboard,Heather,Peterson
+69,haley.williams@yahoo.com,41.0,795.86,e9d5faed-8e44-4a03-9768-d13783b65d0b,NJ,,2023-01-01,DEU661,Roof rack straps,Haley,Williams
+70,joshua.elliott@yahoo.com,43.0,288.76,a27918d5-4bd4-4ff0-9205-974f609182c0,NY,,15-01-2023,CPT535,Leash,Joshua,Elliott
+71,anna.oconnor@gmail.com,,129.63,370c1316-aa3b-4bd0-a15b-766679e69549,New Jersey,,2023-01-01,ZHP546,Beach towel,Anna,Oconnor
+72,paul.perry@gmail.com,53.0,321.73,ad880fa5-9abd-45db-a4d4-e7ce3ac17a65,NJ,,01-15-2023,ICZ284,Wax comb,Paul,Perry
+73,,42.0,102.15,bd29ad7b-aa81-4bb9-9228-a4a3c534fcc8,Massachusetts,,31/12/2023,ERE221,Longboard surfboard,Mark,Mccoy
+74,brianna.brennan@yahoo.com,37.0,463.36,0a99dddd-69a7-4b0d-b1ec-32c9fcaf5dbb,Virginia,,01-15-2023,DEU661,Roof rack straps,Brianna,Brennan
+75,anna.oconnor@gmail.com,55.0,748.66,370c1316-aa3b-4bd0-a15b-766679e69549,MA,,2023-01-01,CUC263,Traction pad,Anna,Oconnor
+76,donna.miller@gmail.com,43.0,770.14,902057ad-15d3-49a0-bbcc-57b69b631d45,New Jersey,,01-15-2023,ALE909,Soft-top surfboard,Donna,Miller
+77,ashley.smith@yahoo.com,32.0,321.06,f4f04583-8c20-4bfa-a597-c2c2ec7363c8,FL,,2023-01-01,ZBA521,Surf wax,Ashley,Smith
+78,colleen.montgomery@yahoo.com,65.0,221.39,ec026bfe-399a-416f-bf4a-483290b960a1,Virginia,,12/31/2023,KBC610,Waterproof watch,Colleen,Montgomery
+79,susan.porter@hotmail.com,56.0,796.24,1acadd2c-dab7-4fa7-b257-25ad2333ee24,Massachusetts,,12/31/2023,XFP892,Surf helmet,Susan,Porter
+80,alicia.carroll@gmail.com,25.0,86.65,50f5bcb6-067e-48d1-bf2e-c967887372f7,New York,,15-01-2023,KFZ139,Ear plugs,Alicia,Carroll
+81,example@,43.0,579.6,a27918d5-4bd4-4ff0-9205-974f609182c0,NJ,,01-15-2023,ZTA186,Shortboard surfboard,Joshua,Elliott
+82,eugene.meyer@yahoo.com,46.0,-89.71,2bf12585-b122-4bc4-804e-99cd2c8a8baf,NY,,31/12/2023,ZIS343,Sunscreen,Eugene,Meyer
+83,example@,32.0,92.64,f4f04583-8c20-4bfa-a597-c2c2ec7363c8,Florida,,12/31/2023,ALE909,Soft-top surfboard,Ashley,Smith
+84,555-1234,53.0,360.48,ad880fa5-9abd-45db-a4d4-e7ce3ac17a65,NJ,,12/31/2023,123ABC,,Paul,Perry
+85,erin.cooper@hotmail.com,63.0,520.94,19e10ae1-a4af-4f3d-8b85-7d01a22d72ce,NY,,12/31/2023,,,Erin,Cooper
+86,gina.christensen@gmail.com,,212.64,a0b8fe1f-544a-422c-b365-fc511f3066bc,New Jersey,,2023-01-01,ERE221,Longboard surfboard,Gina,Christensen
+87,heather.gray@hotmail.com,21.0,495.98,104f5469-88c3-45e6-ba5e-59faf6364c06,FL,,01-15-2023,AAN060,Dry bag,Heather,Gray
+88,amanda.hubbard@hotmail.com,62.0,791.38,edf5ecc7-0113-4ade-869a-dfd6fa15683b,Florida,,2023/01/01,a12bc3,,Amanda,Hubbard
+89,555-1234,43.0,588.32,12e34b7c-d858-4b08-95ed-1527f1f3278f,NY,,2023-01-01,123ABC,,Brian,Dalton
+90,eugene.meyer@yahoo.com,46.0,225.99,2bf12585-b122-4bc4-804e-99cd2c8a8baf,Florida,,2023/01/01,ALE909,Soft-top surfboard,Eugene,Meyer
+91,denise.vargas@yahoo.com,37.0,648.93,0264dd12-e6ce-485d-9f19-062ed7e37497,VA,,2023-01-01,ZHP546,Beach towel,Denise,Vargas
+92,cynthia.wright@yahoo.com,27.0,784.63,9ecbfa97-58a2-4647-9f02-63082b2cc8a8,Virginia,,2023-01-01,ALE909,Soft-top surfboard,Cynthia,Wright
+93,stephanie.sanders@gmail.com,46.0,70.65,68884de5-2364-49a0-a29b-289a836d25e3,NY,,01-15-2023,123ABC,,Stephanie,Sanders
+94,jose.thompson@gmail.com,58.0,332.64,117535b4-3efa-4a7f-9b60-5fbde7e36ca1,MA,,2023-01-01,ZTA186,Shortboard surfboard,Jose,Thompson
+95,michelle.miller@gmail.com,30.0,153.66,1fef2f15-047b-4ee6-9723-1ef67983e7a2,MA,,01-15-2023,ALE909,Soft-top surfboard,Michelle,Miller
+96,edward.hunt@hotmail.com,62.0,672.24,41473f03-e37c-4fff-8d91-7a4963d48b8d,New Jersey,,01-15-2023,123ABC,,Edward,Hunt
+97,alicia.carroll@gmail.com,25.0,708.2,50f5bcb6-067e-48d1-bf2e-c967887372f7,Florida,,12/31/2023,VVL444,Rash guard,Alicia,Carroll
+98,sarah.reeves@yahoo.com,41.0,544.23,4c938301-38ec-491c-9771-f881fa9e5f11,NJ,,2023-01-01,123ABC,,Sarah,Reeves
+99,danielle.cooke@hotmail.com,33.0,656.46,2ec7c5e4-5400-4b77-823a-417dd1741fb9,Virginia,,2023-01-01,AAS588,Surf poncho,Danielle,Cooke
+100,brianna.brennan@yahoo.com,37.0,-153.51,0a99dddd-69a7-4b0d-b1ec-32c9fcaf5dbb,FL,,12/31/2023,VYJ034,Fins,Brianna,Brennan

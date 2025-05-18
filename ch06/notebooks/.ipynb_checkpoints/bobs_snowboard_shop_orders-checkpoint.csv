@@ -1,0 +1,101 @@
+order_id,email,age,purchase_amount,customer_id,store_location,optional_note,purchase_date,SKU,description,first_name,last_name
+1,christina.odonnell@yahoo.com,35.0,240.95,7935402c-3c58-4fa6-83b0-0f3aa09d6b06,Montana,,2023-01-01,VOZ517,Snowboard bindings,Christina,Odonnell
+2,michael.jenkins@hotmail.com,19.0,478.15,18807044-9906-4e92-b9b2-a1ebe999f7b1,Montana,,01-15-2023,HIM864,Camo snowboard pants,Michael,Jenkins
+3,tina.taylor@gmail.com,25.0,404.39,b40ec4e7-18c8-41a7-b3d5-aef12cdb9e14,NV,,15-01-2023,CNJ654,Snowboard tuning kit,Tina,Taylor
+4,carolyn.parker@gmail.com,44.0,,0fa47203-bbe4-477b-9cae-c69ac1401ee8,Montana,,12/31/2023,UDV751,Red winter jacket,Carolyn,Parker
+5,,,112.41,f28f005d-5a0e-4e03-9036-3ab9e670e383,California,,01-15-2023,NUQ169,Neck warmer,Rodney,Flores
+6,john.schneider@yahoo.com,,369.45,4c511193-b992-45af-8390-55df9a485018,CO,,12/31/2023,MUT247,Freestyle snowboard,John,Schneider
+7,barbara.brown@yahoo.com,18.0,86.12,43544bd1-a940-4bca-a94b-88b3a95f8f5b,Nevada,,2023-01-01,123ABC,,Barbara,Brown
+8,donald.galloway@hotmail.com,58.0,92.97,5879b25a-b2b2-4932-b57f-c1abb739173e,NV,,2023-01-01,NUQ169,Neck warmer,Donald,Galloway
+9,craig.parks@yahoo.com,50.0,30.51,f9d8a4e1-a932-4691-8f85-c15eace39a2a,Colorado,,12/31/2023,123ABC,,Craig,Parks
+10,donald.galloway@hotmail.com,58.0,-69.45,5879b25a-b2b2-4932-b57f-c1abb739173e,Nevada,,2023-01-01,XZX706,Long snowboard,Donald,Galloway
+11,rodney.flores@hotmail.com,42.0,169.87,f28f005d-5a0e-4e03-9036-3ab9e670e383,MT,,2023-01-01,,,Rodney,Flores
+12,cesar.allen@yahoo.com,24.0,70.35,ee7f1ab0-1cd8-4b6e-b7c7-06dc1ac3bc48,UT,,01-15-2023,CNJ654,Snowboard tuning kit,Cesar,Allen
+13,cesar.allen@yahoo.com,24.0,64.22,ee7f1ab0-1cd8-4b6e-b7c7-06dc1ac3bc48,Utah,,15-01-2023,UDV751,Red winter jacket,Cesar,Allen
+14,steven.bowman@yahoo.com,58.0,190.36,e9f22d4e-d275-4c17-ae11-56bec6750dff,California,,12/31/2023,CNJ654,Snowboard tuning kit,Steven,Bowman
+15,carolyn.parker@gmail.com,44.0,356.08,0fa47203-bbe4-477b-9cae-c69ac1401ee8,MT,,01-15-2023,DMF417,Short snowboard,Carolyn,Parker
+16,michelle.frazier@hotmail.com,43.0,35.55,4d246c9d-ae75-4de4-826b-fb738294a004,MT,,31/12/2023,a12bc3,,Michelle,Frazier
+17,carrie.trevino@hotmail.com,43.0,42.48,d036408b-42ee-48ed-904b-01942b11ea2f,CO,,2023-01-01,123ABC,,Carrie,Trevino
+18,allison.collins@yahoo.com,54.0,350.79,c8551771-274e-494b-9f87-7dd734a553c4,Colorado,,01-15-2023,QKK407,Snow mittens,Allison,Collins
+19,krystal.hill@hotmail.com,31.0,214.43,0d9213bd-b67e-4395-bd61-ac82082c49fa,UT,,2023-01-01,NUQ169,Neck warmer,Krystal,Hill
+20,barbara.brown@yahoo.com,18.0,45.26,43544bd1-a940-4bca-a94b-88b3a95f8f5b,MT,,12/31/2023,LTI864,Snow helmet,Barbara,Brown
+21,samuel.stafford@yahoo.com,,-54.17,9b5cc193-37c8-4825-956b-6fb700f69cf7,UT,,01-15-2023,OXS815,All-mountain snowboard,Samuel,Stafford
+22,stacey.lindsey@yahoo.com,,476.16,bc047f7a-fa1a-47cf-817b-dfe0bafacaff,Colorado,,2023-01-01,CNJ654,Snowboard tuning kit,Stacey,Lindsey
+23,example@,,52.49,157950d5-ac7f-4e9e-871a-31f306c19f63,CA,,12/31/2023,OXS815,All-mountain snowboard,William,Garcia
+24,julie.williams@hotmail.com,39.0,,24c2353d-f88e-4607-99a0-0091536e7452,CO,,2023-01-01,MUT247,Freestyle snowboard,Julie,Williams
+25,david.farley@hotmail.com,27.0,276.05,b8cae5b6-7ce2-4a81-b0e1-ebc6f169672e,CO,,01-15-2023,abc12,,David,Farley
+26,william.garcia@gmail.com,56.0,85.4,157950d5-ac7f-4e9e-871a-31f306c19f63,California,,01-15-2023,UDV751,Red winter jacket,William,Garcia
+27,carrie.trevino@hotmail.com,43.0,453.78,d036408b-42ee-48ed-904b-01942b11ea2f,UT,,01-15-2023,SHZ464,Lace-up boots,Carrie,Trevino
+28,stacey.lindsey@yahoo.com,41.0,355.06,bc047f7a-fa1a-47cf-817b-dfe0bafacaff,Utah,,12/31/2023,123ABC,,Stacey,Lindsey
+29,555-1234,61.0,449.48,bb3b8906-b78c-414d-b160-ee6ea279a9e7,Montana,,2023/01/01,123ABC,,Andrew,Gordon
+30,example@.co,35.0,263.34,31f73d28-30e1-459f-afd1-b234727d23fb,Colorado,,2023-01-01,QKK407,Snow mittens,Cynthia,Cardenas
+31,barbara.brown@yahoo.com,18.0,310.9,43544bd1-a940-4bca-a94b-88b3a95f8f5b,CO,,2023-01-01,123ABC,,Barbara,Brown
+32,cynthia.cardenas@gmail.com,35.0,85.12,31f73d28-30e1-459f-afd1-b234727d23fb,NV,,31/12/2023,UDV751,Red winter jacket,Cynthia,Cardenas
+33,barbara.brown@yahoo.com,18.0,54.62,43544bd1-a940-4bca-a94b-88b3a95f8f5b,Nevada,,12/31/2023,QKK407,Snow mittens,Barbara,Brown
+34,,49.0,380.48,d4cc3730-6a3a-4d9f-a14d-52c64502c776,NV,,2023/01/01,WED040,Ski goggles,Pamela,Small
+35,stacey.lindsey@yahoo.com,,,bc047f7a-fa1a-47cf-817b-dfe0bafacaff,Colorado,,01-15-2023,VOZ517,Snowboard bindings,Stacey,Lindsey
+36,jack.medina@hotmail.com,63.0,292.16,a904bc67-acde-4ff7-8584-149708c6ee4b,CA,,12/31/2023,abc12,,Jack,Medina
+37,michelle.frazier@hotmail.com,43.0,28.29,4d246c9d-ae75-4de4-826b-fb738294a004,Utah,,2023-01-01,OXS815,All-mountain snowboard,Michelle,Frazier
+38,julie.williams@hotmail.com,39.0,237.01,24c2353d-f88e-4607-99a0-0091536e7452,Colorado,,2023-01-01,QKK407,Snow mittens,Julie,Williams
+39,traci.sherman@yahoo.com,24.0,406.73,fdea4d75-d536-4f4c-b580-b77e0b6ecb74,California,,01-15-2023,RAI516,Blue insulated jacket,Traci,Sherman
+40,traci.sherman@yahoo.com,24.0,455.62,fdea4d75-d536-4f4c-b580-b77e0b6ecb74,California,,2023/01/01,WGE807,Black ski pants,Traci,Sherman
+41,david.farley@hotmail.com,27.0,279.27,b8cae5b6-7ce2-4a81-b0e1-ebc6f169672e,Utah,,12/31/2023,HIM864,Camo snowboard pants,David,Farley
+42,laura.larson@hotmail.com,23.0,68.66,81755fad-1315-479f-b31b-0945e23810cf,Utah,,2023-01-01,CNJ654,Snowboard tuning kit,Laura,Larson
+43,shawn.hurst@gmail.com,39.0,289.11,885b1c56-548c-419a-9245-4dcb78bead3b,Utah,,12/31/2023,XZX706,Long snowboard,Shawn,Hurst
+44,cesar.allen@yahoo.com,24.0,471.38,ee7f1ab0-1cd8-4b6e-b7c7-06dc1ac3bc48,Montana,,2023-01-01,QKK407,Snow mittens,Cesar,Allen
+45,example@.co,,296.15,a904bc67-acde-4ff7-8584-149708c6ee4b,California,,2023-01-01,DMF417,Short snowboard,Jack,Medina
+46,example@.co,33.0,357.54,951722e7-9e5a-4de4-92f9-87b9f42cc89b,CO,,01-15-2023,PNA213,Boa boots,Barbara,Norman
+47,michael.jenkins@hotmail.com,19.0,81.26,18807044-9906-4e92-b9b2-a1ebe999f7b1,CO,,01-15-2023,a12bc3,,Michael,Jenkins
+48,nathan.holmes@yahoo.com,35.0,202.93,6cc7ee76-b764-4940-8724-f55a1d5f5fb8,California,,2023-01-01,VOZ517,Snowboard bindings,Nathan,Holmes
+49,cesar.allen@yahoo.com,24.0,56.76,ee7f1ab0-1cd8-4b6e-b7c7-06dc1ac3bc48,UT,,2023-01-01,abc12,,Cesar,Allen
+50,example@,44.0,248.43,0fa47203-bbe4-477b-9cae-c69ac1401ee8,California,,12/31/2023,PSJ260,Wax scraper,Carolyn,Parker
+51,carolyn.parker@gmail.com,,82.88,0fa47203-bbe4-477b-9cae-c69ac1401ee8,CA,,2023-01-01,PNA213,Boa boots,Carolyn,Parker
+52,kim.kirby@yahoo.com,36.0,31.93,04df1fe0-e713-4bd9-bd33-7d1626772ea9,California,,2023-01-01,FDW213,Touchscreen gloves,Kim,Kirby
+53,pamela.small@gmail.com,49.0,357.84,d4cc3730-6a3a-4d9f-a14d-52c64502c776,California,,2023/01/01,WGE807,Black ski pants,Pamela,Small
+54,donald.galloway@hotmail.com,58.0,213.77,5879b25a-b2b2-4932-b57f-c1abb739173e,Colorado,,01-15-2023,123ABC,,Donald,Galloway
+55,michelle.frazier@hotmail.com,43.0,441.82,4d246c9d-ae75-4de4-826b-fb738294a004,California,,31/12/2023,CNJ654,Snowboard tuning kit,Michelle,Frazier
+56,laura.larson@hotmail.com,23.0,202.27,81755fad-1315-479f-b31b-0945e23810cf,UT,,15-01-2023,PNA213,Boa boots,Laura,Larson
+57,,54.0,373.09,c8551771-274e-494b-9f87-7dd734a553c4,CO,,01-15-2023,DMF417,Short snowboard,Allison,Collins
+58,example@.co,18.0,212.86,43544bd1-a940-4bca-a94b-88b3a95f8f5b,NV,,31/12/2023,XZX706,Long snowboard,Barbara,Brown
+59,donald.galloway@hotmail.com,58.0,343.67,5879b25a-b2b2-4932-b57f-c1abb739173e,CO,,2023-01-01,a12bc3,,Donald,Galloway
+60,steven.bowman@yahoo.com,58.0,467.84,e9f22d4e-d275-4c17-ae11-56bec6750dff,Nevada,,2023-01-01,PSJ260,Wax scraper,Steven,Bowman
+61,,39.0,157.05,24c2353d-f88e-4607-99a0-0091536e7452,Utah,,12/31/2023,,,Julie,Williams
+62,jack.medina@hotmail.com,63.0,249.64,a904bc67-acde-4ff7-8584-149708c6ee4b,UT,,01-15-2023,NKH097,Snow goggles,Jack,Medina
+63,tina.taylor@gmail.com,25.0,160.17,b40ec4e7-18c8-41a7-b3d5-aef12cdb9e14,California,,01-15-2023,NKH097,Snow goggles,Tina,Taylor
+64,pamela.small@gmail.com,49.0,482.93,d4cc3730-6a3a-4d9f-a14d-52c64502c776,NV,,31/12/2023,WGE807,Black ski pants,Pamela,Small
+65,stacey.lindsey@yahoo.com,41.0,142.82,bc047f7a-fa1a-47cf-817b-dfe0bafacaff,UT,,01-15-2023,,,Stacey,Lindsey
+66,christina.odonnell@yahoo.com,35.0,118.26,7935402c-3c58-4fa6-83b0-0f3aa09d6b06,MT,,2023-01-01,PNA213,Boa boots,Christina,Odonnell
+67,jack.medina@hotmail.com,63.0,480.83,a904bc67-acde-4ff7-8584-149708c6ee4b,CA,,2023-01-01,a12bc3,,Jack,Medina
+68,example@.co,22.0,93.41,654f417d-6a14-4a44-abb3-bb82b3131ca6,Colorado,,2023-01-01,NKH097,Snow goggles,Katherine,Smith
+69,william.garcia@gmail.com,56.0,304.79,157950d5-ac7f-4e9e-871a-31f306c19f63,CA,,01-15-2023,QKK407,Snow mittens,William,Garcia
+70,zachary.evans@yahoo.com,48.0,,1783d1d4-eec0-4170-940e-456a01444693,UT,,2023-01-01,abc12,,Zachary,Evans
+71,donald.galloway@hotmail.com,,35.15,5879b25a-b2b2-4932-b57f-c1abb739173e,MT,,12/31/2023,LTI864,Snow helmet,Donald,Galloway
+72,christina.odonnell@yahoo.com,35.0,108.86,7935402c-3c58-4fa6-83b0-0f3aa09d6b06,MT,,2023/01/01,XZX706,Long snowboard,Christina,Odonnell
+73,,50.0,,f9d8a4e1-a932-4691-8f85-c15eace39a2a,California,,2023-01-01,abc12,,Craig,Parks
+74,555-1234,36.0,467.38,469856fa-1344-418f-a142-e4b9dd716b1f,CA,,2023-01-01,YKK145,Splitboard,James,White
+75,samuel.stafford@yahoo.com,48.0,497.67,9b5cc193-37c8-4825-956b-6fb700f69cf7,Nevada,,2023/01/01,abc12,,Samuel,Stafford
+76,carrie.trevino@hotmail.com,43.0,231.56,d036408b-42ee-48ed-904b-01942b11ea2f,Montana,,2023-01-01,QKK407,Snow mittens,Carrie,Trevino
+77,andrew.gordon@yahoo.com,61.0,315.5,bb3b8906-b78c-414d-b160-ee6ea279a9e7,CA,,01-15-2023,CNJ654,Snowboard tuning kit,Andrew,Gordon
+78,jason.adams@hotmail.com,32.0,202.1,66525d85-3b69-4072-8105-f44338f719f1,California,,01-15-2023,YKK145,Splitboard,Jason,Adams
+79,pamela.small@gmail.com,,37.57,d4cc3730-6a3a-4d9f-a14d-52c64502c776,Utah,,31/12/2023,SHZ464,Lace-up boots,Pamela,Small
+80,craig.parks@yahoo.com,50.0,448.4,f9d8a4e1-a932-4691-8f85-c15eace39a2a,Utah,,2023/01/01,123ABC,,Craig,Parks
+81,nicholas.hampton@gmail.com,40.0,244.16,a9280727-6771-4caf-9c37-29aba919a9a0,Nevada,,2023-01-01,RAI516,Blue insulated jacket,Nicholas,Hampton
+82,brittany.schroeder@gmail.com,22.0,326.44,6221b638-093f-4750-aab4-e6c267f2a4cd,MT,,01-15-2023,VOZ517,Snowboard bindings,Brittany,Schroeder
+83,nathan.holmes@yahoo.com,35.0,33.58,6cc7ee76-b764-4940-8724-f55a1d5f5fb8,Montana,,2023-01-01,PNA213,Boa boots,Nathan,Holmes
+84,nathan.holmes@yahoo.com,35.0,192.93,6cc7ee76-b764-4940-8724-f55a1d5f5fb8,Montana,,2023-01-01,YKK145,Splitboard,Nathan,Holmes
+85,kim.kirby@yahoo.com,36.0,370.58,04df1fe0-e713-4bd9-bd33-7d1626772ea9,Utah,,01-15-2023,LTI864,Snow helmet,Kim,Kirby
+86,pamela.small@gmail.com,49.0,421.23,d4cc3730-6a3a-4d9f-a14d-52c64502c776,Nevada,,12/31/2023,abc12,,Pamela,Small
+87,,36.0,63.35,469856fa-1344-418f-a142-e4b9dd716b1f,NV,,01-15-2023,DMF417,Short snowboard,James,White
+88,,54.0,130.98,c8551771-274e-494b-9f87-7dd734a553c4,CO,,01-15-2023,CNJ654,Snowboard tuning kit,Allison,Collins
+89,,51.0,-41.56,1fa1bed4-96b4-441f-abc5-5f269712a133,Utah,,12/31/2023,CNJ654,Snowboard tuning kit,Manuel,Bradley
+90,example@,,-26.78,b40ec4e7-18c8-41a7-b3d5-aef12cdb9e14,CO,,2023-01-01,OXS815,All-mountain snowboard,Tina,Taylor
+91,tina.taylor@gmail.com,25.0,412.89,b40ec4e7-18c8-41a7-b3d5-aef12cdb9e14,CA,,01-15-2023,PNA213,Boa boots,Tina,Taylor
+92,,32.0,131.46,66525d85-3b69-4072-8105-f44338f719f1,Utah,,01-15-2023,XZX706,Long snowboard,Jason,Adams
+93,brady.wright@yahoo.com,50.0,319.12,10b26f3c-1e12-4b22-bb01-df04306dd29b,CO,,01-15-2023,a12bc3,,Brady,Wright
+94,jack.medina@hotmail.com,63.0,293.87,a904bc67-acde-4ff7-8584-149708c6ee4b,MT,,2023-01-01,,,Jack,Medina
+95,555-1234,60.0,125.28,f042cf42-eed0-490e-a968-7050d8081dfc,NV,,12/31/2023,XZX706,Long snowboard,Dustin,Bailey
+96,christopher.robertson@yahoo.com,,55.89,1b2e42ed-0ac3-4cce-9e07-2792d45aee3c,MT,,2023-01-01,a12bc3,,Christopher,Robertson
+97,555-1234,51.0,258.22,072ddcd1-35f1-4924-a7d6-f40afce1ba1e,CO,,2023/01/01,DMF417,Short snowboard,Katherine,Randall
+98,example@,26.0,393.2,8febd1de-903b-43fb-b4a5-80fe1cdd846b,Montana,,01-15-2023,MUT247,Freestyle snowboard,Sean,Huff
+99,steven.bowman@yahoo.com,58.0,414.24,e9f22d4e-d275-4c17-ae11-56bec6750dff,CA,,01-15-2023,VOZ517,Snowboard bindings,Steven,Bowman
+100,jason.adams@hotmail.com,,490.82,66525d85-3b69-4072-8105-f44338f719f1,NV,,2023-01-01,DMF417,Short snowboard,Jason,Adams
