@@ -1,0 +1,132 @@
+[
+  {
+    "customer_id": "c001",
+    "profile": {
+      "personal": {
+        "first_name": "Dave",
+        "last_name": "Melillo",
+        "email": "dave.melillo@gmail.com"
+      },
+      "address": {
+        "address_line": "123mainstreet,newyorkcity,ny,10000",
+        "details": {
+          "apartment": "4B",
+          "building": "Sunrise Towers"
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD2xONLINE",
+        "start_date": "2024-03-01"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Evenings",
+        "therapist_gender": "Any",
+        "topics": ["anxiety", "career"]
+      }
+    }
+  },
+  {
+    "customer_id": "c002",
+    "profile": {
+      "personal": {
+        "first_name": "Jane",
+        "last_name": "Smythe",
+        "email": "jane.smythe@alpha.io"
+      },
+      "address": {
+        "address_line": "456 Elm St, Boston, Massachusetts, 02118",
+        "details": {
+          "apartment": null,
+          "building": null
+        }
+      },
+      "subscription": {
+        "subscription_code": "PLATINUM1xINPERSON",
+        "start_date": "2024-02-15"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Mornings",
+        "therapist_gender": "Female",
+        "topics": ["stress"]
+      }
+    }
+  },
+  {
+    "customer_id": "c003",
+    "profile": {
+      "personal": {
+        "first_name": "Jonny",
+        "last_name": "Smith",
+        "email": "jonny_smith@acmeco.com"
+      },
+      "address": {
+        "address_line": "789 Oak Ave,Los Angeles,CA,90001",
+        "details": {
+          "apartment": "2A",
+          "building": "Palm Court"
+        }
+      },
+      "subscription": {
+        "subscription_code": "SILVER1xONLINE",
+        "start_date": "2024-01-20"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Afternoons",
+        "therapist_gender": "Male",
+        "topics": ["relationships"]
+      }
+    }
+  },
+  {
+    "customer_id": "c004",
+    "profile": {
+      "personal": {
+        "first_name": "Maria",
+        "last_name": "Lopez",
+        "email": "maria.lopez@gmail.com"
+      },
+      "address": {
+        "address_line": "321 Pine Rd,Miami,FL,33101",
+        "details": {
+          "apartment": null,
+          "building": "Ocean View"
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD1xINPERSON",
+        "start_date": "2024-04-10"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Evenings",
+        "therapist_gender": "Any",
+        "topics": ["depression"]
+      }
+    }
+  },
+  {
+    "customer_id": "c005",
+    "profile": {
+      "personal": {
+        "first_name": "Theresa",
+        "last_name": "Nguyen",
+        "email": "theresa.nguyen@company.com"
+      },
+      "address": {
+        "address_line": "555 Maple Blvd,Seattle,WA,98101",
+        "details": {
+          "apartment": "10C",
+          "building": null
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD2xONLINE",
+        "start_date": "2024-03-15"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Mornings",
+        "therapist_gender": "Male",
+        "topics": ["work stress", "family"]
+      }
+    }
+  }
+] 
