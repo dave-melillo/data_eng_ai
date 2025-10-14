@@ -1,0 +1,30 @@
+# This is a placeholder for Figure 7.1: Nested JSON data set containing information about books in a library
+# In a real implementation, this would be an actual PNG image file showing the JSON structure
+# The figure would illustrate the hierarchical structure of the library JSON data used in listings 7.3 and 7.4
+
+{
+  "library": {
+    "name": "Central Library",
+    "location": "Downtown",
+    "books": [
+      {
+        "title": "Python Programming",
+        "author": {
+          "first_name": "John",
+          "last_name": "Smith"
+        },
+        "genres": ["Programming", "Technology"],
+        "published_year": 2023
+      },
+      {
+        "title": "Data Science Handbook", 
+        "author": {
+          "first_name": "Jane",
+          "last_name": "Doe"
+        },
+        "genres": ["Data Science", "Analytics"],
+        "published_year": 2022
+      }
+    ]
+  }
+} 

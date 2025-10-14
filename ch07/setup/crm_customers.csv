@@ -1,0 +1,29 @@
+customer_id,first_name,last_name,email,address,state,zip,subscription_code
+crm001,Alexander,Johnson,alex.johnson@gmail.com,123 Main St,New York,NY,10001,GOLD2xONLINE
+crm002,Alex,Johnson,alex.johnson@gmail.com,123mainstreet,newyorkcity,ny,10001,GOLD2xONLINE
+crm003,Jordan,Smith,jordan.smith@techcorp.io,456 Elm St,Boston,Massachusetts,02118,PLATINUM1xINPERSON
+crm004,J,Smith,j.smith@techcorp.io,456 Elm Street,Boston,MA,02118,PLATINUM1xINPERSON
+crm005,Casey,Brown,casey@innovate.com,789 Oak Ave,Los Angeles,CA,90001,SILVER1xONLINE
+crm006,Casey,Brown,casey_brown@innovate.com,789 Oak Ave,Los Angeles,CA,90001,SILVER1xONLINE
+crm007,Taylor,Davis,taylor.davis@gmail.com,321 Pine Rd,Miami,FL,33101,GOLD1xINPERSON
+crm008,Morgan,Wilson,morgan.wilson@globaltech.com,555 Maple Blvd,Seattle,WA,98101,GOLD2xONLINE
+crm009,Riley,Anderson,riley.anderson@healthplus.org,777 Cedar St,Denver,Colorado,80203,PLATINUM2xHYBRID
+crm010,Avery,Thompson,avery.thompson@yahoo.com,888 Spruce Way,Phoenix,AZ,85001,SILVER2xONLINE
+crm011,Cameron,Lee,cameron.lee@dataflow.net,999 Birch Ln,Portland,Oregon,97201,ENTERPRISE3xHYBRID
+crm012,Quinn,Martinez,q.martinez@outlook.com,111 Willow Dr,Austin,TX,73301,GOLD1xONLINE
+crm013,Sage,Robinson,sage.robinson@medtech.com,222 Aspen Ave,Nashville,Tennessee,37201,PLATINUM1xINPERSON
+crm014,Drew,Clark,drew.clark@gmail.com,333 Elm Street,Chicago,IL,60601,SILVER1xINPERSON
+crm015,Reese,Walker,reese.walker@fintech.biz,444 Oak St,San Francisco,California,94102,ENTERPRISE1xONLINE
+crm016,Blake,Young,blake.young@hotmail.com,555 Pine Ave,Atlanta,GA,30301,GOLD2xHYBRID
+crm017,Finley,Garcia,finley.garcia@nonprofit.org,666 Maple Rd,Minneapolis,Minnesota,55401,SILVER2xINPERSON
+crm018,Emery,Hall,emery.hall@startup.co,777 Cedar Blvd,Raleigh,NC,27601,PLATINUM3xONLINE
+crm019,Parker,White,parker.white@consulting.com,888 Birch St,Salt Lake City,Utah,84101,GOLD1xINPERSON
+crm020,Dakota,Green,dakota.green@gmail.com,999 Maple Ave,Richmond,VA,23220,SILVER1xONLINE
+crm021,River,Adams,river.adams@techstart.io,111 Oak Blvd,Columbus,OH,43215,PLATINUM1xONLINE
+crm022,Skyler,Miller,skyler.miller@enterprise.com,222 Pine St,Indianapolis,IN,46201,ENTERPRISE2xHYBRID
+crm023,Phoenix,Taylor,phoenix.taylor@yahoo.com,333 Cedar Ave,Kansas City,MO,64108,GOLD2xONLINE
+crm024,Rowan,Anderson,rowan.anderson@healthplus.org,444 Elm Blvd,Oklahoma City,OK,73102,SILVER1xINPERSON
+crm025,Sage,Robinson,s.robinson@medtech.com,222 Aspen Avenue,Nashville,TN,37201,PLATINUM1xINPERSON
+crm026,Dakota,Greene,d.greene@gmail.com,999 Maple Avenue,Richmond,Virginia,23220,SILVER1xONLINE
+crm027,Cameron,Lee,cam.lee@dataflow.net,999 Birch Lane,Portland,OR,97201,ENTERPRISE3xHYBRID
+crm028,Emery,Hall,e.hall@startup.co,777cedarblvd,raleigh,nc,27601,PLATINUM3xONLINE 

@@ -1,0 +1,65 @@
+================================================================================
+                    AIRFLOW NEWS PIPELINE - QUICK REFERENCE
+================================================================================
+
+LOCATION:
+---------
+/Users/davemelillo/Desktop/data_eng_ai/ch08/airflow_project/
+
+FASTEST START:
+--------------
+cd /Users/davemelillo/Desktop/data_eng_ai/ch08/airflow_project
+./quickstart.sh
+
+WEB UI:
+-------
+http://localhost:8080
+Username: airflow
+Password: airflow
+
+PIPELINE OVERVIEW:
+------------------
+Extract (NewsAPI) → Transform (OpenAI) → Enrich (AI) → Load (PostgreSQL) → Verify
+
+PARAMETERS:
+-----------
+{
+  "query": "Tesla",
+  "from_date": "2025-10-05",
+  "to_date": "2025-10-08"
+}
+
+COMMON COMMANDS:
+----------------
+Start:    docker-compose up -d
+Stop:     docker-compose down
+Logs:     docker-compose logs -f airflow-scheduler
+Restart:  docker-compose restart
+Status:   docker-compose ps
+
+DOCUMENTATION:
+--------------
+1. START_HERE.txt          ← Read this first
+2. GETTING_STARTED.md      ← 5-minute setup
+3. SETUP_GUIDE.md          ← Complete guide
+4. README.md               ← Project overview
+
+TROUBLESHOOTING:
+----------------
+DAG not showing?     → Wait 30s, check logs
+Import errors?       → Reinstall: pip install openai psycopg pandas pydantic
+Can't connect to DB? → Use host.docker.internal in .env
+Services restart?    → Check Docker RAM (need 4GB+)
+
+PREREQUISITES:
+--------------
+✓ Docker Desktop running
+✓ PostgreSQL (news_db)
+✓ NewsAPI key
+✓ OpenAI API key
+
+FILES YOU NEED TO EDIT:
+-----------------------
+.env  ← Copy from env.template and add your API keys
+
+================================================================================

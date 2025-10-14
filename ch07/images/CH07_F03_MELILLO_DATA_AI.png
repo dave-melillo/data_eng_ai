@@ -1,0 +1,19 @@
+# This is a placeholder for Figure 7.3: Sample list of transactions for time series and advanced date transformation examples
+# In a real implementation, this would be an actual PNG image file showing the transaction data structure
+# The figure would illustrate the transaction records used in listings 7.7 and 7.8
+
+SAMPLE TRANSACTION DATA:
+┌─────────────┬─────────────────────────┬─────────────┬─────────┐
+│ Account     │ Transaction Date        │ Amount Due  │ Terms   │
+├─────────────┼─────────────────────────┼─────────────┼─────────┤
+│ ACME Corp   │ 2024-03-15T10:30:00Z   │ $5,000.00   │ NET30   │
+│ ACME Corp   │ 2024-04-22T14:15:00Z   │ $3,500.00   │ NET60   │
+│ Beta Inc    │ 2024-05-10T09:45:00Z   │ $2,000.00   │ NET30   │
+└─────────────┴─────────────────────────┴─────────────┴─────────┘
+
+TRANSFORMATION REQUIREMENTS:
+- Convert timestamps to multiple timezones (PST, EST, GST)
+- Extract date components (month, year, fiscal quarter)
+- Calculate due dates using business days
+- Determine contribution percentages by account
+- Apply custom fiscal calendar (Q1=Feb-Apr, Q2=May-Jul, etc.) 

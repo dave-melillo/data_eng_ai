@@ -1,0 +1,432 @@
+[
+  {
+    "customer_id": "c001",
+    "profile": {
+      "personal": {
+        "first_name": "Alex",
+        "last_name": "Johnson",
+        "email": "alex.johnson@gmail.com"
+      },
+      "address": {
+        "address_line": "123mainstreet,newyorkcity,ny,10001",
+        "details": {
+          "apartment": "4B",
+          "building": "Sunrise Towers"
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD2xONLINE",
+        "start_date": "2024-03-01"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Evenings",
+        "therapist_gender": "Any",
+        "topics": [
+          "anxiety",
+          "career"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c002",
+    "profile": {
+      "personal": {
+        "first_name": "Jordan",
+        "last_name": "Smith",
+        "email": "jordan.smith@techcorp.io"
+      },
+      "address": {
+        "address_line": "456 Elm St, Boston, Massachusetts, 02118",
+        "details": {
+          "apartment": null,
+          "building": null
+        }
+      },
+      "subscription": {
+        "subscription_code": "PLATINUM1xINPERSON",
+        "start_date": "2024-02-15"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Mornings",
+        "therapist_gender": "Female",
+        "topics": [
+          "stress"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c003",
+    "profile": {
+      "personal": {
+        "first_name": "Casey",
+        "last_name": "Brown",
+        "email": "casey_brown@innovate.com"
+      },
+      "address": {
+        "address_line": "789 Oak Ave,Los Angeles,CA,90001",
+        "details": {
+          "apartment": "2A",
+          "building": "Palm Court"
+        }
+      },
+      "subscription": {
+        "subscription_code": "SILVER1xONLINE",
+        "start_date": "2024-01-20"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Afternoons",
+        "therapist_gender": "Male",
+        "topics": [
+          "relationships"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c004",
+    "profile": {
+      "personal": {
+        "first_name": "Taylor",
+        "last_name": "Davis",
+        "email": "taylor.davis@gmail.com"
+      },
+      "address": {
+        "address_line": "321 Pine Rd,Miami,FL,33101",
+        "details": {
+          "apartment": null,
+          "building": "Ocean View"
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD1xINPERSON",
+        "start_date": "2024-04-10"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Evenings",
+        "therapist_gender": "Any",
+        "topics": [
+          "depression"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c005",
+    "profile": {
+      "personal": {
+        "first_name": "Morgan",
+        "last_name": "Wilson",
+        "email": "morgan.wilson@globaltech.com"
+      },
+      "address": {
+        "address_line": "555 Maple Blvd,Seattle,WA,98101",
+        "details": {
+          "apartment": "10C",
+          "building": null
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD2xONLINE",
+        "start_date": "2024-03-15"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Mornings",
+        "therapist_gender": "Male",
+        "topics": [
+          "work stress",
+          "family"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c006",
+    "profile": {
+      "personal": {
+        "first_name": "Riley",
+        "last_name": "Anderson",
+        "email": "riley.anderson@healthplus.org"
+      },
+      "address": {
+        "address_line": "777 Cedar St, Denver, Colorado, 80203",
+        "details": {
+          "apartment": "5F",
+          "building": "Mountain View"
+        }
+      },
+      "subscription": {
+        "subscription_code": "PLATINUM2xHYBRID",
+        "start_date": "2024-01-05"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Afternoons",
+        "therapist_gender": "Female",
+        "topics": [
+          "anxiety",
+          "self-esteem"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c007",
+    "profile": {
+      "personal": {
+        "first_name": "Avery",
+        "last_name": "Thompson",
+        "email": "avery.thompson@yahoo.com"
+      },
+      "address": {
+        "address_line": "888spruceway,phoenix,az,85001",
+        "details": {
+          "apartment": null,
+          "building": "Desert Oaks"
+        }
+      },
+      "subscription": {
+        "subscription_code": "SILVER2xONLINE",
+        "start_date": "2024-02-28"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Evenings",
+        "therapist_gender": "Any",
+        "topics": [
+          "grief",
+          "trauma"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c008",
+    "profile": {
+      "personal": {
+        "first_name": "Cameron",
+        "last_name": "Lee",
+        "email": "cameron.lee@dataflow.net"
+      },
+      "address": {
+        "address_line": "999 Birch Ln, Portland, Oregon, 97201",
+        "details": {
+          "apartment": "12A",
+          "building": null
+        }
+      },
+      "subscription": {
+        "subscription_code": "ENTERPRISE3xHYBRID",
+        "start_date": "2024-03-20"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Mornings",
+        "therapist_gender": "Female",
+        "topics": [
+          "leadership",
+          "burnout"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c009",
+    "profile": {
+      "personal": {
+        "first_name": "Quinn",
+        "last_name": "Martinez",
+        "email": "q.martinez@outlook.com"
+      },
+      "address": {
+        "address_line": "111 Willow Dr,Austin,TX,73301",
+        "details": {
+          "apartment": "3C",
+          "building": "Riverside Plaza"
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD1xONLINE",
+        "start_date": "2024-04-01"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Afternoons",
+        "therapist_gender": "Male",
+        "topics": [
+          "addiction recovery"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c010",
+    "profile": {
+      "personal": {
+        "first_name": "Sage",
+        "last_name": "Robinson",
+        "email": "sage.robinson@medtech.com"
+      },
+      "address": {
+        "address_line": "222 Aspen Ave, Nashville, Tennessee, 37201",
+        "details": {
+          "apartment": null,
+          "building": "Music City Towers"
+        }
+      },
+      "subscription": {
+        "subscription_code": "PLATINUM1xINPERSON",
+        "start_date": "2024-01-15"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Evenings",
+        "therapist_gender": "Any",
+        "topics": [
+          "performance anxiety",
+          "creativity"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c011",
+    "profile": {
+      "personal": {
+        "first_name": "Drew",
+        "last_name": "Clark",
+        "email": "drew.clark@gmail.com"
+      },
+      "address": {
+        "address_line": "333elmstreet,chicago,il,60601",
+        "details": {
+          "apartment": "7B",
+          "building": null
+        }
+      },
+      "subscription": {
+        "subscription_code": "SILVER1xINPERSON",
+        "start_date": "2024-02-10"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Mornings",
+        "therapist_gender": "Female",
+        "topics": [
+          "social anxiety"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c012",
+    "profile": {
+      "personal": {
+        "first_name": "Reese",
+        "last_name": "Walker",
+        "email": "reese.walker@fintech.biz"
+      },
+      "address": {
+        "address_line": "444 Oak St, San Francisco, California, 94102",
+        "details": {
+          "apartment": "15D",
+          "building": "Golden Gate Plaza"
+        }
+      },
+      "subscription": {
+        "subscription_code": "ENTERPRISE1xONLINE",
+        "start_date": "2024-03-05"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Afternoons",
+        "therapist_gender": "Male",
+        "topics": [
+          "imposter syndrome",
+          "work-life balance"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c013",
+    "profile": {
+      "personal": {
+        "first_name": "Blake",
+        "last_name": "Young",
+        "email": "blake.young@hotmail.com"
+      },
+      "address": {
+        "address_line": "555 Pine Ave,Atlanta,GA,30301",
+        "details": {
+          "apartment": null,
+          "building": "Peachtree Heights"
+        }
+      },
+      "subscription": {
+        "subscription_code": "GOLD2xHYBRID",
+        "start_date": "2024-04-15"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Evenings",
+        "therapist_gender": "Any",
+        "topics": [
+          "relationship issues",
+          "communication"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c014",
+    "profile": {
+      "personal": {
+        "first_name": "Finley",
+        "last_name": "Garcia",
+        "email": "finley.garcia@nonprofit.org"
+      },
+      "address": {
+        "address_line": "666 Maple Rd, Minneapolis, Minnesota, 55401",
+        "details": {
+          "apartment": "8A",
+          "building": null
+        }
+      },
+      "subscription": {
+        "subscription_code": "SILVER2xINPERSON",
+        "start_date": "2024-01-25"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Mornings",
+        "therapist_gender": "Female",
+        "topics": [
+          "compassion fatigue",
+          "boundaries"
+        ]
+      }
+    }
+  },
+  {
+    "customer_id": "c015",
+    "profile": {
+      "personal": {
+        "first_name": "Emery",
+        "last_name": "Hall",
+        "email": "emery.hall@startup.co"
+      },
+      "address": {
+        "address_line": "777cedarblvd,raleigh,nc,27601",
+        "details": {
+          "apartment": "11F",
+          "building": "Innovation Square"
+        }
+      },
+      "subscription": {
+        "subscription_code": "PLATINUM3xONLINE",
+        "start_date": "2024-03-30"
+      },
+      "therapy_preferences": {
+        "preferred_time": "Afternoons",
+        "therapist_gender": "Male",
+        "topics": [
+          "decision fatigue",
+          "entrepreneurship stress"
+        ]
+      }
+    }
+  }
+] 

@@ -1,0 +1,11 @@
+customer_id,first_name,last_name,email,address,state,zip,subscription_code
+c001,David,Melillo,dave.melillo@gmail.com,123 Main St,New York,NY,10000,GOLD2xONLINE
+c001,Dave,Melillo,dave.melillo@gmail.com,123mainstreet,newyorkcity,ny,10000,GOLD2xONLINE
+c002,Jane,Smythe,jane.smythe@alpha.io,456 Elm St,Boston,Massachusetts,02118,PLATINUM1xINPERSON
+c002,Janie,Smyth,j.smythe@alpha.io,456 Elm Street,Boston,MA,02118,PLATINUM1xINPERSON
+c003,Johnny,Smith,johnny@acmeco.com,789 Oak Ave,Los Angeles,CA,90001,SILVER1xONLINE
+c003,Jonny,Smith,jonny_smith@acmeco.com,789 Oak Ave,Los Angeles,CA,90001,SILVER1xONLINE
+c004,Maria,Lopez,maria.lopez@gmail.com,321 Pine Rd,Miami,FL,33101,GOLD1xINPERSON
+c005,Theresa,Nguyen,theresa.nguyen@company.com,555 Maple Blvd,Seattle,WA,98101,GOLD2xONLINE
+c006,Mark,Johnson,mark.johnson@personalmail.com,888 Spruce St,Denver,Colorado,80203,SILVER1xONLINE
+c007,Emily,Chen,emily.chen@business.org,222 Willow Way,San Francisco,CA,94102,GOLD1xINPERSON 

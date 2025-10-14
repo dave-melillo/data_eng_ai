@@ -1,0 +1,20 @@
+# This is a placeholder for Figure 7.2: Example existing customer records and incoming email of unknown customer
+# In a real implementation, this would be an actual PNG image file showing the entity resolution scenario
+# The figure would illustrate the incoming email and existing CRM customer records used in listings 7.5 and 7.6
+
+INCOMING EMAIL: jonny_smith@acmeco.com
+
+EXISTING CRM CUSTOMERS:
+┌─────────────────┬──────────────────────────┐
+│ Name            │ Email                    │
+├─────────────────┼──────────────────────────┤
+│ John Smith      │ john.smith@acmeco.com    │
+│ Jane Smythe     │ jane@alpha.io            │
+│ Johnny S.       │ johnny@acmeco.com        │
+│ Bob Wilson      │ bob@beta.com             │
+└─────────────────┴──────────────────────────┘
+
+ENTITY RESOLUTION CHALLENGE:
+- Email domain matches (acmeco.com)
+- Name variations (jonny vs john vs johnny)
+- Which customer is the best match? 

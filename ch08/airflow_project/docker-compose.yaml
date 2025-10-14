@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  airflow:
+    image: apache/airflow:2.7.0-python3.11
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+      AIRFLOW__WEBSERVER__SECRET_KEY: 'airflow'
+      AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: 'True'
+      AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+      # Your API keys and DB credentials
+      NEWS_API_KEY: ${NEWS_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      PGHOST: ${PGHOST:-host.docker.internal}
+      PGPORT: ${PGPORT:-5432}
+      PGDATABASE: ${PGDATABASE:-news_db}
+      PGUSER: ${PGUSER:-news_user}
+      PGPASSWORD: ${PGPASSWORD:-}
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./airflow-data:/opt/airflow
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "
+        pip install --quiet openai psycopg[binary] pandas pydantic python-dotenv &&
+        airflow db migrate &&
+        airflow users create --username airflow --password airflow --firstname Admin --lastname User --role Admin --email admin@example.com || true &&
+        airflow standalone
+      "
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
