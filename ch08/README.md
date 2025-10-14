@@ -1,4 +1,4 @@
-# Chapter 8: Multi-Agent AI Pipelines and Orchestration
+# Chapter 8: AI and The Data Lifecycle
 
 This chapter explores building production-ready data pipelines using multiple specialized AI agents, each handling different aspects of extraction, transformation, and loading (ETL). You'll learn how to orchestrate these agents using Apache Airflow to create automated, scheduled workflows for real-time news intelligence.
 
