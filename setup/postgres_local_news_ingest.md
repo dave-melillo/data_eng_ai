@@ -17,9 +17,9 @@ Run these once to create a dedicated user and database for this exercise.
 
 Option A: Terminal helpers (recommended):
 ```sh
-createuser --interactive --pwprompt news_user
+createuser -U postgres -h localhost --pwprompt news_user
 # Enter a strong password when prompted (remember it)
-createdb --owner=news_user news_db
+createdb -U postgres -h localhost --owner=news_user news_db
 ```
 
 Option B: Using psql:

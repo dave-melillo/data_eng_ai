@@ -1,0 +1,156 @@
+AI Prompt Begin 
+You are helping design a tabular schema for baseball pitch events.
+Each input record is a natural language play by play description from a World Series game. Every record represents exactly one pitch.
+Here are some example events:
+[PASTE 3 TO 10 SAMPLE EVENTS HERE, ONE PER LINE]
+We want to turn each event into one structured row so we can answer questions like:
+- How many pitches were thrown in the game
+- Distribution of pitch types
+- Average and max pitch velocity
+- Which hitters were most effective against specific pitch types
+- How often plate appearances reached a full count
+- Other advanced pitch level and batter vs pitcher analytics
+
+Your tasks:
+1. Propose a schema for a single pitch event as if it were a database table.
+   - Return a JSON array where each item has:
+     - "name": column name in snake_case
+     - "type": data type (string, integer, float, boolean, or timestamp)
+     - "description": short explanation of the field
+     - "required": true or false
+   - Include fields for game context, pitch context, and outcome. For example, consider things like inning, count before and after the pitch, runners on base, pitch type, velocity, location (if present), batter and pitcher identifiers, and result of the pitch.
+2. Call out any gotchas or ambiguities you notice in the sample events.
+   - For example, places where the language is vague, numbers are missing, or multiple interpretations are possible.
+3. List any follow up questions or small pieces of research a data engineer should do before finalizing the schema.
+   - For example, whether certain fields are always available, how to handle missing pitch speed, or how to represent special situations.
+Output:
+- First, the JSON array for the proposed schema.
+- Second, a short bulleted list of gotchas and open questions.
+Do not invent fields that cannot be inferred from the text at all. Prefer a smaller, reliable schema over a very large speculative one.
+AI Response Begin [ChatGPT 5.1 Instant]  
+[
+  {
+    "name": "game_id",
+    "type": "string",
+    "description": "Unique identifier for the game",
+    "required": false
+  },
+  {
+    "name": "inning_number",
+    "type": "integer",
+    "description": "Numeric inning number",
+    "required": true
+  },
+  {
+    "name": "inning_half",
+    "type": "string",
+    "description": "Top or Bottom of the inning",
+    "required": true
+  },
+  {
+    "name": "outs",
+    "type": "integer",
+    "description": "Number of outs at the moment of the pitch",
+    "required": false
+  },
+  {
+    "name": "score_home",
+    "type": "integer",
+    "description": "Home team runs before the pitch",
+    "required": false
+  },
+  {
+    "name": "score_away",
+    "type": "integer",
+    "description": "Away team runs before the pitch",
+    "required": false
+  },
+  {
+    "name": "pitcher_name",
+    "type": "string",
+    "description": "Name of the pitcher delivering the pitch",
+    "required": true
+  },
+  {
+    "name": "batter_name",
+    "type": "string",
+    "description": "Name of the batter facing the pitch",
+    "required": true
+  },
+  {
+    "name": "runners_on_base",
+    "type": "string",
+    "description": "Comma separated bases occupied (e.g. '1B', '1B,2B', 'None')",
+    "required": false
+  },
+  {
+    "name": "pre_pitch_balls",
+    "type": "integer",
+    "description": "Ball count before the pitch",
+    "required": false
+  },
+  {
+    "name": "pre_pitch_strikes",
+    "type": "integer",
+    "description": "Strike count before the pitch",
+    "required": false
+  },
+  {
+    "name": "post_pitch_balls",
+    "type": "integer",
+    "description": "Ball count after the pitch if determinable",
+    "required": false
+  },
+  {
+    "name": "post_pitch_strikes",
+    "type": "integer",
+    "description": "Strike count after the pitch if determinable",
+    "required": false
+  },
+  {
+    "name": "pitch_type",
+    "type": "string",
+    "description": "Type of pitch thrown (e.g. splitter, fastball) if stated",
+    "required": false
+  },
+  {
+    "name": "pitch_velocity_mph",
+    "type": "float",
+    "description": "Velocity of the pitch in mph if provided",
+    "required": false
+  },
+  {
+    "name": "pitch_result",
+    "type": "string",
+    "description": "Immediate outcome (e.g. Ball, Strike, In play)",
+    "required": false
+  },
+  {
+    "name": "ball_in_play",
+    "type": "boolean",
+    "description": "True if the ball was put in play",
+    "required": false
+  },
+  {
+    "name": "play_description",
+    "type": "string",
+    "description": "Raw natural language description for traceability",
+    "required": true
+  }
+]
+### Gotchas and Ambiguities
+* Natural language often omits **outs**, **score**, or **runner advancement** unless explicitly stated.
+* Count information may be partial. For example, “count starts fresh at 0-0” is clean, but other phrases might imply the count without stating both numbers.
+* Pitch result wording varies a lot. “Off the plate for ball one” is clear, but others might describe movement without clarity on ball vs strike.
+* Runners referenced by name require inference to determine which base they occupy unless stated.
+* Batter and pitcher names are present, but identifiers may require lookup to ensure consistency across events.
+* Some events may imply a ball in play without providing a result (e.g., hit, out, foul).
+* Velocity and pitch type are frequently missing.
+### Follow Up Questions / Research
+* Confirm whether every event record always represents **exactly one pitch**, including fouls, pickoffs, mound visits, etc.
+* Determine if you can reliably infer **outs**, **score**, and **runner advancement** from a broader data source, or if missing fields will remain null.
+* Should runners-on-base be normalized into boolean fields (on_first, on_second, on_third) instead of a composite string?
+* Decide whether **pitch_result** should be coded into a controlled vocabulary (Ball, Strike Looking, Strike Swinging, Foul, In Play, etc).
+* Clarify how to handle **ambiguous pitch descriptions** where no explicit result is stated.
+* Determine if **pitch IDs**, **batter IDs**, **pitcher IDs**, or **team IDs** will be available from an official roster dataset for normalization.
+* Confirm whether follow-up events like hits, outs, or stolen base attempts belong in this table or in separate event tables.
