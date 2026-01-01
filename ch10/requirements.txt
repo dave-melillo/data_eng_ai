@@ -1,0 +1,26 @@
+# Chapter 10 - Web Scraping Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0  # For reading Excel files
+
+# Web Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0  # Fast HTML parser
+
+# Environment Configuration
+python-dotenv>=1.0.0
+
+# Jupyter Support (for notebooks)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+notebook>=7.0.0
+
+# Progress Bars (for batch processing)
+tqdm>=4.65.0
+
+# Optional but Recommended
+jupyterlab>=4.0.0  # Enhanced notebook interface
