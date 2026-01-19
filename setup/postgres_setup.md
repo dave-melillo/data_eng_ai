@@ -1,9 +1,3 @@
-Aight, cher—we’re gonna fix this up so *nobody* gets lost, whether they’re runnin’ Windows, macOS (with or without Homebrew), or Linux. This’ll be a **multipurpose, flexible setup guide** that gives clear routes no matter how folks like to install their tools.
-
-Here’s the **revised + extended** version of the PostgreSQL and pgAdmin setup section:
-
----
-
 ## Installing PostgreSQL and pgAdmin
 
 Getting PostgreSQL and pgAdmin up and running depends on your operating system *and* your preferred setup method. Below are detailed instructions for **Windows**, **macOS** (with and without Homebrew), and **Linux**. If you run into trouble, don’t worry—we include a fallback option using Docker.
@@ -121,7 +115,3 @@ CREATE DATABASE my_database;
 1. Open pgAdmin and connect to your server.
 2. Right-click "Databases" → *Create* → *Database*.
 3. Name it `my_database` and click Save.
-
----
-
-Let me know if you’d like this turned into a Markdown file, a downloadable appendix doc, or embedded as a sidebar in the chapter. Happy to do all three if you need!
