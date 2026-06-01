@@ -9,7 +9,7 @@ Whether you're fetching data from an API, flattening nested JSON, or writing a t
 ## 🚀 What This Chapter Covers
 
 - 🤖 Using AI to write and refine Python scripts for data engineering tasks.
-- 🔗 Interacting with APIs like NumbersAPI and Open Brewery DB.
+- 🔗 Interacting with APIs like PokeAPI and Open Brewery DB.
 - 🧱 Flattening deeply nested JSON into clean, structured DataFrames.
 - 🔍 Writing and normalizing regular expressions (regex) with AI assistance.
 - 🧠 Practicing prompt strategies like zero-shot, few-shot, and refinement loops in Python.
@@ -30,16 +30,16 @@ Whether you're fetching data from an API, flattening nested JSON, or writing a t
 
 ## 🌐 APIs Explored
 
-### 📚 NumbersAPI
+### 🔴 PokeAPI
 
-A free and simple API that returns trivia, math, or historical facts about numbers.
+A free and simple API that returns detailed JSON data about every Pokémon, keyed by Pokédex number.
 
-- URL Format: `http://numbersapi.com/<number>?json`
+- URL Format: `https://pokeapi.co/api/v2/pokemon/<id or name>`
 - No API key needed
-- Supports optional params like `notfound`, `fragment`, and `json=true`
+- Returns fields like `name`, `types`, `base_experience`, and `abilities`
 - Great for exploring basic API request/response workflows
 
-📖 [NumbersAPI Documentation](https://numbersapi.com)
+📖 [PokeAPI Documentation](https://pokeapi.co/docs/v2)
 
 ---
 
@@ -57,9 +57,9 @@ A public API that returns structured info about breweries across the U.S.
 
 ## 🧪 Try-It-Now Challenges (explained in the full chapter)
 
-1. Query trivia facts using NumbersAPI and format them into a `pandas` DataFrame.
+1. Query Pokémon data using PokeAPI and format it into a `pandas` DataFrame.
 2. Enhance your API scripts with retry logic and logging using few-shot prompting.
-3. Upload an API reference file (e.g., `numbers_api_reference.txt`) to guide your AI assistant toward better code.
+3. Upload an API reference file (e.g., `pokeapi_reference.txt`) to guide your AI assistant toward better code.
 4. Flatten deeply nested JSON data from `JSONPlaceholder` into usable table formats.
 5. Extract and normalize U.S. phone numbers using Python’s `re` module.
 

@@ -1,0 +1,84 @@
+PokeAPI Reference
+A free, no-authentication REST API that serves detailed data about every
+Pokemon. All responses are JSON. Base URL: https://pokeapi.co/api/v2/
+
+URL Structure
+Request a single Pokemon by its Pokedex number (id) or by its name:
+
+    https://pokeapi.co/api/v2/pokemon/{id or name}
+
+Examples
+    https://pokeapi.co/api/v2/pokemon/1     -> Bulbasaur
+    https://pokeapi.co/api/v2/pokemon/42    -> Golbat
+    https://pokeapi.co/api/v2/pokemon/pikachu
+
+If the id or name does not exist, the API responds with HTTP 404 (Not Found),
+so always check response.status_code before parsing.
+
+Response Fields (single Pokemon)
+The /pokemon/{id} endpoint returns a large JSON object. The fields used most
+often in data work are:
+
+    id                integer   The Pokedex number.
+    name              string    The Pokemon's name (lowercase).
+    height            integer   Height in decimetres.
+    weight            integer   Weight in hectograms.
+    base_experience   integer   Base experience gained for defeating it.
+    order             integer   Sort order across all Pokemon.
+
+Nested lists (easy to misread without the docs):
+
+    types             A list of slots. Each item has the shape
+                          {"slot": 1, "type": {"name": "poison", "url": ...}}
+                      The type name is at  types[i]["type"]["name"].
+
+    abilities         A list of slots. Each item has the shape
+                          {"ability": {"name": "keen-eye", "url": ...},
+                           "is_hidden": false, "slot": 1}
+                      The ability name is at  abilities[i]["ability"]["name"].
+
+    stats             A list of {"base_stat": int,
+                                 "stat": {"name": "hp", ...}} objects.
+
+Example (trimmed) response for https://pokeapi.co/api/v2/pokemon/42
+    {
+      "id": 42,
+      "name": "golbat",
+      "height": 16,
+      "weight": 75,
+      "base_experience": 159,
+      "types": [
+        {"slot": 1, "type": {"name": "poison"}},
+        {"slot": 2, "type": {"name": "flying"}}
+      ],
+      "abilities": [
+        {"ability": {"name": "inner-focus"}, "is_hidden": false, "slot": 1},
+        {"ability": {"name": "infiltrator"}, "is_hidden": true,  "slot": 3}
+      ]
+    }
+
+Listing and Pagination
+To page through all Pokemon, call the collection endpoint with the optional
+limit and offset query parameters (both easy to miss without reading the docs):
+
+    https://pokeapi.co/api/v2/pokemon?limit=20&offset=0
+
+    limit    integer   How many results to return (default 20).
+    offset   integer   How many results to skip before returning (default 0).
+
+The response is a JSON object:
+    {
+      "count": 1302,
+      "next": "https://pokeapi.co/api/v2/pokemon?offset=20&limit=20",
+      "previous": null,
+      "results": [
+        {"name": "bulbasaur", "url": "https://pokeapi.co/api/v2/pokemon/1/"},
+        ...
+      ]
+    }
+Each item in results carries a url you can follow to fetch the full record.
+
+Fair Use
+PokeAPI is free and unauthenticated. Be polite: cache responses when you can
+and avoid hammering the server in tight loops. See https://pokeapi.co/docs/v2
+for the full documentation.
