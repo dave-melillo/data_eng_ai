@@ -1,0 +1,12 @@
+# Chapter 12 - AI-powered web scraping data pipelines
+# Install with: pip install -r requirements.txt
+
+openai>=1.0.0          # structured outputs via beta.chat.completions.parse
+pydantic>=2.0.0        # data contract / model_dump
+beautifulsoup4>=4.12.0 # HTML cleaning
+requests>=2.31.0       # fetching + SerpAPI
+pandas>=2.0.0          # results tables
+
+# Jupyter (for the notebooks)
+jupyterlab>=4.0.0
+ipykernel>=6.25.0

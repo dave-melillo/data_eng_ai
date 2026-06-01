@@ -2,3 +2,12 @@
 # Never commit env files
 .env
 *.env
+!sample.env
+
+# OS / editor junk
+.DS_Store
+
+# Runtime logs and caches
+*.log
+__pycache__/
+.ipynb_checkpoints/
