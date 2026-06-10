@@ -115,3 +115,33 @@ CREATE DATABASE my_database;
 1. Open pgAdmin and connect to your server.
 2. Right-click "Databases" → *Create* → *Database*.
 3. Name it `my_database` and click Save.
+
+---
+
+## 🎬 Loading the Pagila sample database
+
+Chapter 3 (and the SQL examples in Chapter 2) use **Pagila**, a PostgreSQL sample database modeled on a DVD rental store. The two SQL files you need ship in the `ch02/` folder of this repository:
+
+* `pagila-schema.sql` — creates the tables, views, and functions
+* `pagila-insert-data.sql` — loads the sample data
+
+With PostgreSQL installed and running, create a database named `pagila` and load the schema **first**, then the data. From the repository root:
+
+```bash
+# 1. Create the database
+createdb pagila
+
+# 2. Load the schema, then the data (order matters)
+psql -d pagila -f ch02/pagila-schema.sql
+psql -d pagila -f ch02/pagila-insert-data.sql
+```
+
+If `createdb` isn't on your path, create the database from inside `psql` (`CREATE DATABASE pagila;`) and then run the two `psql ... -f` commands above.
+
+Confirm the load worked:
+
+```bash
+psql -d pagila -c "SELECT count(*) FROM film;"
+```
+
+You should see **1000** films. Point pgAdmin or your `psql` connection at the `pagila` database whenever a chapter calls for it.

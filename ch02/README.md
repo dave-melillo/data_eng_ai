@@ -51,7 +51,8 @@ Using the provided nested `orders` JSON:
 ## 📂 Files in This Folder
 
 - `chapter_02_notebook.ipynb` – Python exercises and AI-generated solutions  
-- `pagila_setup.sql` – Schema and seed data for Pagila database (if not already loaded)  
+- `pagila-schema.sql` – Schema (tables, views, functions) for the Pagila database  
+- `pagila-insert-data.sql` – Seed data for the Pagila database (load after the schema)  
 - `sample_prompts.md` – Suggested prompts to feed ChatGPT  
 - `chapter_02_lab_answers.md` – Reference solutions to SQL and Python exercises
 
