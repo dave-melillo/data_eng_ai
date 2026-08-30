@@ -3,7 +3,8 @@
 import requests  #A
 import pandas as pd  
 import logging  
-from datetime import datetime, timedelta  
+from datetime import datetime, timedelta
+from urllib.parse import quote
 
 NEWS_API_KEY = 'your_news_api_key_here'  #B
 
@@ -13,7 +14,7 @@ yesterday = today - timedelta(days=1)
 
 # Function to extract articles from NewsAPI  
 def extract_articles(query, from_date=yesterday, api_key=NEWS_API_KEY):  
-    url = f'https://newsapi.org/v2/everything?q={query}&from={from_date}&to={today}&apiKey={api_key}'  #D
+    url = f'https://newsapi.org/v2/everything?q={quote(query)}&from={from_date}&to={today}&apiKey={api_key}'  #D
     response = requests.get(url)  
     
     if response.status_code == 200:  
