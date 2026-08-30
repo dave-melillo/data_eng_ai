@@ -24,7 +24,11 @@ def configure_logging(level=logging.INFO):  #B
 
 def with_retries(max_attempts=3, base_delay=1.0,
                  exceptions=(Exception,)):  #D
-    """Retry a function with exponential backoff."""
+    """Retry a function with exponential backoff.
+
+    The (Exception,) default is a catch-all; real call sites
+    should pass a specific exception tuple (see Listing 12.3).
+    """
     def decorator(func):
         @functools.wraps(func)  #E
         def wrapper(*args, **kwargs):
@@ -56,4 +60,4 @@ def with_retries(max_attempts=3, base_delay=1.0,
 #E Preserve the wrapped function's name so logs stay readable
 #F The happy path: succeed and return immediately
 #G Out of attempts, log the failure and re-raise for the caller
-#H Wait longer after each failure (1s, 2s, 4s, ...)
+#H Wait longer after each failure (1s, then 2s at max_attempts=3)

@@ -8,7 +8,12 @@ REQUIRED_FIELDS = ["product_name", "brand_name", "price_usd"]  #A
 def _parse_price(price: Optional[str]) -> Optional[float]:  #B
     if not price:
         return None
-    match = re.search(r"[\d,]+\.?\d*", price.replace(",", ""))
+    text = price.strip()
+    if re.search(r"\d+,\d{2}$", text):  # EU style, e.g. "395,00"
+        text = text.replace(".", "").replace(",", ".")
+    else:
+        text = text.replace(",", "")
+    match = re.search(r"\d+\.?\d*", text)
     return float(match.group()) if match else None
 
 

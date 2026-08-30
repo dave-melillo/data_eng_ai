@@ -1,5 +1,5 @@
 # Listing 12.5 Agent 3: AI extraction
-import openai
+from openai import OpenAIError
 
 EXTRACTION_PROMPT = """You are a product data extraction assistant.
 Given the text of a product web page, extract these fields:
@@ -13,11 +13,11 @@ Rules:
 """  #A
 
 
-@with_retries(max_attempts=2, exceptions=(openai.OpenAIError,))  #B
+@with_retries(max_attempts=2, exceptions=(OpenAIError,))  #B
 def extract_product(cleaned_text: str) -> ProductExtraction:  #C
     """Agent: pull structured fields from cleaned text."""
-    response = openai.beta.chat.completions.parse(  #D
-        model="gpt-4o",
+    response = client.chat.completions.parse(  #D
+        model=MODEL_MAIN,
         messages=[
             {"role": "system", "content": EXTRACTION_PROMPT},
             {"role": "user", "content": cleaned_text[:8000]},  #E

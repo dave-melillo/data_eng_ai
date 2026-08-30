@@ -30,7 +30,7 @@ def run_one(product: ProductInput) -> PipelineRecord:  #A
         record.enriched = enriched
         record.notes = issues
 
-        if issues or ranking.confidence.lower() == "low":  #F
+        if issues or record.confidence.lower() == "low":  #F
             record.status = "needs_review"
         else:
             record.status = "success"

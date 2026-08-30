@@ -1,7 +1,6 @@
 # Listing 12.3 Agent 1: URL discovery
 import os
 
-import openai
 import requests
 from pydantic import BaseModel
 
@@ -60,8 +59,8 @@ def discover_url(search_key: str):  #E
         f"Product search key: {search_key}\n\n"
         f"Candidate URLs:\n{listing}"
     )
-    completion = openai.beta.chat.completions.parse(  #H
-        model="gpt-4o-mini",
+    completion = client.chat.completions.parse(  #H
+        model=MODEL_MINI,
         messages=[
             {"role": "system",
              "content": URL_RANKING_SYSTEM_PROMPT},
