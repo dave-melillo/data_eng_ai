@@ -16,7 +16,7 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import pandas as pd
 import hashlib
-import openai
+from openai import OpenAI
 import os
 from pydantic import BaseModel
 from typing import Optional
@@ -54,7 +54,9 @@ DATA_PATH = '/opt/airflow/dags/../data/world_series_2025_game_7_playbyplay.csv'
 TEMP_DATA_PATH = '/opt/airflow/airflow-data/temp_data.pkl'
 
 # OpenAI setup
-openai.api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 
 # =============================================================================
@@ -150,8 +152,8 @@ Return the result as a JSON object matching the PlayByPlayExtraction structure.
     
     for idx, row in df.iterrows():
         try:
-            completion = openai.beta.chat.completions.parse(
-                model="gpt-4o",
+            completion = client.chat.completions.parse(
+                model=MODEL_MAIN,
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": row['playbyplay']}
@@ -285,8 +287,8 @@ Return a JSON object with: canonical_abbr (str), canonical_text (str), confidenc
         # Map pitcher
         if pd.notna(row['pitcher_name']):
             try:
-                completion = openai.beta.chat.completions.parse(
-                    model="gpt-4o",
+                completion = client.chat.completions.parse(
+                    model=MODEL_MAIN,
                     messages=[
                         {"role": "system", "content": pitcher_prompt},
                         {"role": "user", "content": f"Pitcher name: {row['pitcher_name']}"}
@@ -303,8 +305,8 @@ Return a JSON object with: canonical_abbr (str), canonical_text (str), confidenc
         # Map batter
         if pd.notna(row['batter_name']):
             try:
-                completion = openai.beta.chat.completions.parse(
-                    model="gpt-4o",
+                completion = client.chat.completions.parse(
+                    model=MODEL_MAIN,
                     messages=[
                         {"role": "system", "content": batter_prompt},
                         {"role": "user", "content": f"Batter name: {row['batter_name']}"}
@@ -321,8 +323,8 @@ Return a JSON object with: canonical_abbr (str), canonical_text (str), confidenc
         # Map pitch type
         if pd.notna(row['pitch_type']):
             try:
-                completion = openai.beta.chat.completions.parse(
-                    model="gpt-4o",
+                completion = client.chat.completions.parse(
+                    model=MODEL_MAIN,
                     messages=[
                         {"role": "system", "content": pitch_type_prompt},
                         {"role": "user", "content": f"Pitch type: {row['pitch_type']}"}
@@ -400,8 +402,8 @@ Return a JSON object with: key_moment (bool), excitement (int 1-10)
     play_analyses = []
     for idx, row in df_enriched.iterrows():
         try:
-            completion = openai.beta.chat.completions.parse(
-                model="gpt-4o",
+            completion = client.chat.completions.parse(
+                model=MODEL_MAIN,
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": row['playbyplay']}
