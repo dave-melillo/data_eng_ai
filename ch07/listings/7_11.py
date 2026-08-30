@@ -1,4 +1,4 @@
-import openai  #A
+from openai import OpenAI
 import os  #B
 from dotenv import load_dotenv  #C
 from pydantic import BaseModel  #D
@@ -6,7 +6,9 @@ from datetime import datetime  #E
 import pandas as pd  #F
 
 load_dotenv()  #G
-openai.api_key = os.getenv("OPENAI_API_KEY")  #H
+client = OpenAI()  #H
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 transactions = [
     {"account": "A001", "transaction_date": "2025-01-31T16:00:00Z", "terms": "NET30", "amount_due": 1200},
@@ -84,8 +86,8 @@ for tx in transactions:  #AD
     payload["account_total"] = account_totals[tx["account"]]  #AF
 
     try:  #AG
-        completion = openai.beta.chat.completions.parse(  #AH
-            model="gpt-4o",  #AI
+        completion = client.chat.completions.parse(  #AH
+            model=MODEL_MAIN,  #AI
             messages=[  #AJ
                 {"role": "system", "content": system_prompt},  #AK
                 {"role": "user", "content": f"{payload}"}  #AL

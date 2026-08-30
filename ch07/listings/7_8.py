@@ -1,10 +1,12 @@
-import openai  #A
+from openai import OpenAI
 import os  #B
 from dotenv import load_dotenv  #C
 from pydantic import BaseModel  #D
 
 load_dotenv()  #E
-openai.api_key = os.getenv("OPENAI_API_KEY")  #F
+client = OpenAI()  #F
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 customers = [
     {
@@ -63,8 +65,8 @@ user_message = {
 }  #P
 
 # Call the OpenAI API with schema enforcement  #Q
-completion = openai.beta.chat.completions.parse(  #R
-    model="gpt-4o",  #S
+completion = client.chat.completions.parse(  #R
+    model=MODEL_MAIN,  #S
     messages=[  #T
         {"role": "system", "content": system_prompt},  #U
         {"role": "user", "content": f"{user_message}"}  #V

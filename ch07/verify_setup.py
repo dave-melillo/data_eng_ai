@@ -149,7 +149,7 @@ def check_openai_connection():
     
     try:
         from dotenv import load_dotenv
-        import openai
+        from openai import OpenAI
         
         # Load environment variables
         load_dotenv()
@@ -166,15 +166,16 @@ def check_openai_connection():
         print_status("API Key loaded", True, f"Key: {api_key[:10]}...")
         
         # Test API connection
-        openai.api_key = api_key
-        response = openai.models.list()
+        client = OpenAI(api_key=api_key)
+        response = client.models.list()
         
         print_status("API Connection", True, f"Found {len(response.data)} models")
         
-        # Check for GPT-4o availability
+        # Check that the configured main model is available
+        model_main = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")
         model_names = [model.id for model in response.data]
-        has_gpt4o = 'gpt-4o' in model_names
-        print_status("GPT-4o available", has_gpt4o)
+        has_main = model_main in model_names
+        print_status(f"{model_main} available", has_main)
         
         return True
         

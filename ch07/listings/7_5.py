@@ -1,11 +1,13 @@
-import openai  #A
+from openai import OpenAI
 import os  #B
 from dotenv import load_dotenv  #C
 from pydantic import BaseModel  #D
 import pandas as pd  #E
 
 load_dotenv()  #F
-openai.api_key = os.getenv("OPENAI_API_KEY")  #G
+client = OpenAI()  #G
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 json_data = {
   "library": {
@@ -54,8 +56,8 @@ for book in json_data["library"]["books"]:  #Q
     }
 
     try:  #V
-        completion = openai.beta.chat.completions.parse(  #W
-            model="gpt-4o",  #X
+        completion = client.chat.completions.parse(  #W
+            model=MODEL_MAIN,  #X
             messages=[  #Y
                 {"role": "system", "content": system_prompt},  #Z
                 {"role": "user", "content": f"{payload}"}  #AA
