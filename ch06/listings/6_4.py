@@ -1,12 +1,14 @@
 import pandas as pd
-import openai
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from typing import List
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 # Define the response structure
 class CleanedData(BaseModel):
@@ -33,8 +35,8 @@ prompt = (
 )
 
 # Completion call with response_format
-completion = openai.beta.chat.completions.parse(
-    model="gpt-4o",
+completion = client.chat.completions.parse(
+    model=MODEL_MAIN,
     messages=[
         {"role": "system", "content": prompt},
         {"role": "user", "content": str(records)}
@@ -46,7 +48,7 @@ completion = openai.beta.chat.completions.parse(
 cleaning_info = completion.choices[0].message.parsed
 
 # Apply cleaning
-df_cleaned = df.drop(index=cleaning_info.duplicates)
+df_cleaned = df.drop(index=cleaning_info.duplicates, errors='ignore')
 df_cleaned = df_cleaned.drop(columns=cleaning_info.drop_columns, errors='ignore')
 
 # Show cleaned output

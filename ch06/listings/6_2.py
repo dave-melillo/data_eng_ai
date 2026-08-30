@@ -1,10 +1,13 @@
-import openai
+import logging
+from openai import OpenAI
 import pandas as pd
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY") 
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 # Define a function to detect inconsistencies using Open AI's Chat Completions API Endpoint
 def detect_inconsistencies(df):
@@ -16,10 +19,14 @@ def detect_inconsistencies(df):
         prompt = f"Identify any inconsistencies in the column '{col}' in this data: {df[col].tolist()}. Note that purchase amount should not be negative for any item."  #C
         
         # Send the prompt to Open AI's Chat Completions API Endpoint and store the response
-        response = openai.chat.completions.create(
-            model="gpt-4o",
-            messages=[{"role": "user", "content": prompt}]
-        )  #D
+        try:
+            response = client.chat.completions.create(
+                model=MODEL_MAIN,
+                messages=[{"role": "user", "content": prompt}]
+            )  #D
+        except Exception as e:
+            logging.error(f"API error for column '{col}': {e}")
+            continue
         
         # Save the response for the column
         discrepancies[col] = response.choices[0].message.content.strip() #E

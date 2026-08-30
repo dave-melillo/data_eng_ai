@@ -1,3 +1,4 @@
+import logging
 import pandas as pd
 from dateutil import parser  #A
 
@@ -18,12 +19,13 @@ def normalize_date(val):  #K
     try:
         return parser.parse(val).strftime('%Y-%m-%d')  #L
     except Exception:
+        logging.warning(f"Could not parse date: {val!r}")
         return None  #M
 
 df['purchase_date'] = df['purchase_date'].apply(normalize_date)  #N
 
 # Enforce SKU format (3 uppercase letters + 3 digits)  #O
-df['sku'] = df['sku'].str.upper().str.extract(r'([A-Z]{3}\d{3})', expand=False)  #P
+df['sku'] = df['sku'].str.upper().str.extract(r'^([A-Z]{3}\d{3})$', expand=False)  #P
 
 # Truncate product_description to 20 characters  #Q
 df['product_description'] = df['product_description'].str[:20]  #R

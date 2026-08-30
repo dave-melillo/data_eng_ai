@@ -1,12 +1,14 @@
 import pandas as pd
-import openai
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from typing import List, Optional
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 # Define the structured response format  #A
 class StandardizationInstructions(BaseModel):  #B
@@ -46,8 +48,8 @@ prompt = (
 
 
 # Call OpenAI API with structured response  #S
-completion = openai.beta.chat.completions.parse(
-    model="gpt-4o",
+completion = client.chat.completions.parse(
+    model=MODEL_MAIN,
     messages=[
         {"role": "system", "content": prompt},  #T
         {"role": "user", "content": str(records)}  #U
