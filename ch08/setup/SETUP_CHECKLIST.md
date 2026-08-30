@@ -171,11 +171,12 @@ print('✅ NewsAPI works' if r.status_code == 200 else f'❌ Error: {r.status_co
 ### Test 5: OpenAI Connection
 ```bash
 python -c "
-import openai, os
+import os
 from dotenv import load_dotenv
+from openai import OpenAI
 load_dotenv('notebooks/.env')
-openai.api_key = os.getenv('OPENAI_API_KEY')
-models = openai.models.list()
+client = OpenAI()
+models = client.models.list()
 print(f'✅ OpenAI connected - {len(models.data)} models available')
 "
 ```

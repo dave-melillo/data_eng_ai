@@ -193,16 +193,16 @@ OPENAI_API_KEY=sk-your-actual-api-key-here
 ```bash
 # Test the API connection with a simple script
 python -c "
-import openai
 import os
 from dotenv import load_dotenv
+from openai import OpenAI
 
 load_dotenv()
-openai.api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI()
 
 try:
     # Test API connection
-    response = openai.models.list()
+    response = client.models.list()
     print('✅ OpenAI API connection successful!')
     print(f'Available models: {len(response.data)} models found')
 except Exception as e:
@@ -327,12 +327,10 @@ sudo pip install -r requirements.txt
 ```bash
 # Check your usage programmatically
 python -c "
-import openai
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
 try:
     # Note: Usage endpoint may require specific permissions

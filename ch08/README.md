@@ -645,13 +645,13 @@ echo $OPENAI_API_KEY
 
 # Test connection
 python -c "
-import openai
 import os
 from dotenv import load_dotenv
+from openai import OpenAI
 load_dotenv()
-openai.api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI()
 try:
-    models = openai.models.list()
+    models = client.models.list()
     print('✅ OpenAI connection successful')
 except Exception as e:
     print(f'❌ Error: {e}')

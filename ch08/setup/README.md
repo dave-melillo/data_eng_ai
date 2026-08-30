@@ -122,7 +122,7 @@ All pipelines require these 7 variables:
 python -c "import requests, os; from dotenv import load_dotenv; load_dotenv('notebooks/.env'); r=requests.get(f'https://newsapi.org/v2/everything?q=test&pageSize=1&apiKey={os.getenv(\"NEWS_API_KEY\")}'); print('✅ NewsAPI works' if r.status_code==200 else '❌ Failed')"
 
 # Test OpenAI
-python -c "import openai, os; from dotenv import load_dotenv; load_dotenv('notebooks/.env'); openai.api_key=os.getenv('OPENAI_API_KEY'); models=openai.models.list(); print(f'✅ OpenAI works - {len(models.data)} models')"
+python -c "from dotenv import load_dotenv; from openai import OpenAI; load_dotenv('notebooks/.env'); client=OpenAI(); models=client.models.list(); print(f'✅ OpenAI works - {len(models.data)} models')"
 
 # Test PostgreSQL
 python -c "import psycopg, os; from dotenv import load_dotenv; load_dotenv('notebooks/.env'); conn=psycopg.connect(host=os.getenv('PGHOST'),port=os.getenv('PGPORT'),dbname=os.getenv('PGDATABASE'),user=os.getenv('PGUSER'),password=os.getenv('PGPASSWORD')); print('✅ PostgreSQL connected'); conn.close()"
