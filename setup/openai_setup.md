@@ -47,13 +47,15 @@ export OPENAI_API_KEY="your-api-key-here"
 
 #### Basic Usage
 ```python
+import os
 from openai import OpenAI
 
 # Client automatically uses OPENAI_API_KEY environment variable
 client = OpenAI()
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")
 
 response = client.chat.completions.create(
-    model="gpt-4",
+    model=MODEL_MAIN,
     messages=[{"role": "user", "content": "Hello, AI!"}]
 )
 
@@ -63,6 +65,7 @@ print(response.choices[0].message.content)
 #### Structured Outputs (Used in Later Chapters)
 The book uses OpenAI's structured outputs feature for reliable data extraction:
 ```python
+import os
 from openai import OpenAI
 from pydantic import BaseModel
 
@@ -72,9 +75,10 @@ class MovieReview(BaseModel):
     summary: str
 
 client = OpenAI()
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")
 
-response = client.beta.chat.completions.parse(
-    model="gpt-4o",
+response = client.chat.completions.parse(
+    model=MODEL_MAIN,
     messages=[{"role": "user", "content": "Review the movie Inception"}],
     response_format=MovieReview
 )

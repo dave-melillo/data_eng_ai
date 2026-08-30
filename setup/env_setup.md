@@ -34,11 +34,12 @@ In your Python script or notebook, do this:
 
 ```python
 import os
+from openai import OpenAI
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
 ```
 
-This pulls the key from your environment and keeps it out of your code.
+The client picks up the key from your environment automatically and keeps it out of your code.
 
 ---
 
@@ -62,10 +63,10 @@ pip install python-dotenv
 
 ```python
 from dotenv import load_dotenv
-import os
+from openai import OpenAI
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
 ```
 
 ---
@@ -75,7 +76,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 Print your key (carefully!) or just check that it’s not `None`:
 
 ```python
-print("Key loaded:", openai.api_key is not None)
+print("Key loaded:", os.getenv("OPENAI_API_KEY") is not None)
 ```
 
 ---
