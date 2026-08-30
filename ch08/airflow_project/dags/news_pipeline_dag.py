@@ -18,6 +18,10 @@ import json
 from airflow.decorators import dag, task
 from airflow.models import Variable
 
+# Model configuration (override via env as models evolve)
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
+
 # Default arguments for the DAG
 default_args = {
     'owner': 'airflow',
@@ -98,14 +102,14 @@ def news_articles_pipeline():
         
         Extracts structured data and performs sentiment analysis.
         """
-        import openai
+        from openai import OpenAI
         import pandas as pd
         from pydantic import BaseModel
         
-        openai.api_key = os.getenv('OPENAI_API_KEY')
-        
-        if not openai.api_key:
+        if not os.getenv('OPENAI_API_KEY'):
             raise ValueError("OPENAI_API_KEY environment variable is not set")
+        
+        client = OpenAI()  # reads OPENAI_API_KEY from the environment
         
         class ExtractedArticle(BaseModel):
             source: str
@@ -134,13 +138,13 @@ Return exactly one object that matches the schema.
                 f"{text}"
             )
             try:
-                response = openai.chat.completions.create(
-                    model="gpt-4o",
+                response = client.chat.completions.create(
+                    model=MODEL_MAIN,
                     messages=[
                         {"role": "system", "content": "You are a helpful assistant."},
                         {"role": "user", "content": prompt}
                     ],
-                    max_tokens=50,
+                    max_completion_tokens=50,
                     temperature=0.3
                 )
                 sentiment_str = response.choices[0].message.content.strip()
@@ -158,8 +162,8 @@ Return exactly one object that matches the schema.
         
         for idx, article in enumerate(articles[:max_articles]):
             try:
-                completion = openai.beta.chat.completions.parse(
-                    model="gpt-4o",
+                completion = client.chat.completions.parse(
+                    model=MODEL_MAIN,
                     messages=[
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": f"{article}"}
@@ -189,11 +193,11 @@ Return exactly one object that matches the schema.
         
         Adds timezone conversions, topic categorization, and region detection.
         """
-        import openai
+        from openai import OpenAI
         import pandas as pd
         from pydantic import BaseModel
         
-        openai.api_key = os.getenv('OPENAI_API_KEY')
+        client = OpenAI()  # reads OPENAI_API_KEY from the environment
         
         class QualityCategorization(BaseModel):
             short_date: str            # YYYY-MM-DD (no timezone)
@@ -226,8 +230,8 @@ Instructions:
                 "publish_date": article.get("publish_date", "")
             }
             try:
-                completion = openai.beta.chat.completions.parse(
-                    model="gpt-4o",
+                completion = client.chat.completions.parse(
+                    model=MODEL_MAIN,
                     messages=[
                         {"role": "system", "content": qc_system_prompt},
                         {"role": "user", "content": f"{article_input}"}
@@ -259,10 +263,10 @@ Instructions:
         Generates DDL if needed and inserts articles into the database.
         """
         import psycopg
-        import openai
+        from openai import OpenAI
         from pydantic import BaseModel
         
-        openai.api_key = os.getenv('OPENAI_API_KEY')
+        client = OpenAI()  # reads OPENAI_API_KEY from the environment
         
         class TableDDL(BaseModel):
             ddl: str
@@ -296,8 +300,8 @@ Rules:
 - Return strictly the SQL, no comments or extra text.
         """.strip()
         
-        completion = openai.beta.chat.completions.parse(
-            model="gpt-4o",
+        completion = client.chat.completions.parse(
+            model=MODEL_MAIN,
             messages=[
                 {"role": "system", "content": ddl_prompt},
                 {"role": "user", "content": "Generate the DDL now."}

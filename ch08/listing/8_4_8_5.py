@@ -2,7 +2,7 @@ import os
 import json
 import logging
 import pandas as pd
-import openai
+from openai import OpenAI
 from pydantic import BaseModel
 
 # Ensure psycopg is available
@@ -13,7 +13,9 @@ except Exception:
     subprocess.run([sys.executable, "-m", "pip", "install", "psycopg[binary]>=3.1"], check=False)
     import psycopg
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 # Pydantic for DDL contract
 class TableDDL(BaseModel):
@@ -49,8 +51,8 @@ Rules:
 """.strip()
 
 # Ask AI for DDL
-completion = openai.beta.chat.completions.parse(
-    model="gpt-4o",
+completion = client.chat.completions.parse(
+    model=MODEL_MAIN,
     messages=[
         {"role": "system", "content": ddl_prompt},
         {"role": "user", "content": "Generate the DDL now."}

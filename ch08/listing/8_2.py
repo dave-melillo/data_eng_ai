@@ -1,12 +1,14 @@
 import os
 import logging
-import openai
+from openai import OpenAI
 import pandas as pd
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
+MODEL_MAIN = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")       # frontier model: extraction, hard reasoning
+MODEL_MINI = os.getenv("DEAI_MODEL_MINI", "gpt-5.4-mini")  # cheaper model: ranking, triage, high volume
 
 class ExtractedArticle(BaseModel):
     source: str
@@ -35,13 +37,13 @@ def perform_sentiment_analysis(text: str):
         f"{text}"
     )
     try:
-        response = openai.chat.completions.create(
-            model="gpt-4o",
+        response = client.chat.completions.create(
+            model=MODEL_MAIN,
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=50,
+            max_completion_tokens=50,
             temperature=0.3
         )
         sentiment_str = response.choices[0].message.content.strip()
@@ -56,8 +58,8 @@ input_articles = articles  # from prior cell
 # Limit for quick iteration; adjust/remove as needed
 for idx, article in enumerate(input_articles[:5]):
     try:
-        completion = openai.beta.chat.completions.parse(
-            model="gpt-4o",
+        completion = client.chat.completions.parse(
+            model=MODEL_MAIN,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"{article}"}

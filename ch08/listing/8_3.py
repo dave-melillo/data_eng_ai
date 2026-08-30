@@ -1,5 +1,5 @@
 import logging
-import openai
+from openai import OpenAI
 import pandas as pd
 from pydantic import BaseModel
 
@@ -34,8 +34,8 @@ for idx, row in extracted_df.iterrows():
         "publish_date": row.get("publish_date", "")
     }
     try:
-        completion = openai.beta.chat.completions.parse(
-            model="gpt-4o",
+        completion = client.chat.completions.parse(
+            model=MODEL_MAIN,
             messages=[
                 {"role": "system", "content": qc_system_prompt},
                 {"role": "user", "content": f"{article_input}"}

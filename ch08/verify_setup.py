@@ -230,7 +230,7 @@ def check_openai_connection():
     print_header("Testing OpenAI API Connection")
     
     try:
-        import openai
+        from openai import OpenAI
         from dotenv import load_dotenv
         load_dotenv()
         load_dotenv('notebooks/.env')
@@ -240,20 +240,21 @@ def check_openai_connection():
             print_error("OPENAI_API_KEY not configured")
             return False
         
-        openai.api_key = api_key
+        client = OpenAI(api_key=api_key)
         
         # Test API with a simple request
-        response = openai.models.list()
+        response = client.models.list()
         
         print_success("OpenAI API connected successfully")
         print_info(f"Available models: {len(response.data)} models found")
         
-        # Check for GPT-4o availability
+        # Check that the configured main model is available
+        model_main = os.getenv("DEAI_MODEL_MAIN", "gpt-5.5")
         models = [m.id for m in response.data]
-        if 'gpt-4o' in models:
-            print_success("GPT-4o model available")
+        if model_main in models:
+            print_success(f"{model_main} model available")
         else:
-            print_warning("GPT-4o not found in available models")
+            print_warning(f"{model_main} not found in available models")
         
         return True
         
@@ -376,10 +377,10 @@ def run_mini_pipeline_test():
         load_dotenv()
         load_dotenv('notebooks/.env')
         
-        import openai
+        from openai import OpenAI
         from pydantic import BaseModel
         
-        openai.api_key = os.getenv('OPENAI_API_KEY')
+        client = OpenAI()  # reads OPENAI_API_KEY from the environment
         
         # Define a simple test schema
         class TestExtraction(BaseModel):
@@ -395,8 +396,8 @@ def run_mini_pipeline_test():
         - test_number: 42
         """
         
-        completion = openai.beta.chat.completions.parse(
-            model="gpt-4o",
+        completion = client.chat.completions.parse(
+            model=os.getenv("DEAI_MODEL_MAIN", "gpt-5.5"),
             messages=[
                 {"role": "system", "content": test_prompt},
                 {"role": "user", "content": "Run test"}
