@@ -12,7 +12,7 @@ def preprocess_articles(articles):
         data.append({  
             'title': title,  
             'description': description,  
-            'content': clean_text  
+            'combined_text': clean_text  
         })  
         
     df = pd.DataFrame(data)  #D

@@ -36,6 +36,7 @@ prompt = (
 
 # Completion call with response_format
 completion = client.chat.completions.parse(
+    temperature=0,  # reduces variability; does not eliminate it
     model=MODEL_MAIN,
     messages=[
         {"role": "system", "content": prompt},
