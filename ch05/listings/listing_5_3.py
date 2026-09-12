@@ -29,7 +29,7 @@ def perform_sentiment_analysis(article_content):
         return None  
 
 # Example use case  
-example_article_content = df_articles['content'].iloc[0]  #C
+example_article_content = df_articles['combined_text'].iloc[0]  #C
 sentiment = perform_sentiment_analysis(example_article_content)  #D
 print(f"Sentiment: {sentiment}")  #E
 

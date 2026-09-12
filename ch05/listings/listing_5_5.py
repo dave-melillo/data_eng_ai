@@ -2,7 +2,7 @@
 def update_with_sentiment(df):  
     sentiments = []  #A
     
-    for index, content in enumerate(df['content']):  
+    for index, content in enumerate(df['combined_text']):  
         sentiment = perform_sentiment_analysis(content)  #B
         sentiments.append(sentiment)  
         logging.info(f"Processed article {index + 1}/{len(df)}: Sentiment = {sentiment}")  #C
