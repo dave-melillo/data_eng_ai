@@ -44,7 +44,7 @@ not have a key, you can bypass discovery and feed the pipeline URLs directly:
 from listings... import URLRanking  # or paste the class from 12_3.py
 
 KNOWN_URLS = {
-    "GORUCK GR1 26L": "https://www.goruck.com/products/gr1",
+    "GORUCK GR1 26L": "https://www.goruck.com/products/gr1-usa",
     # add your own brand+product -> URL mappings here
 }
 
